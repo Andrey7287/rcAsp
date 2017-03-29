@@ -10,8 +10,7 @@
 </head>
 
 <body>
-	<div class="body">
-		<div class="content">
+
 			<header class="header">
 				<div class="top-panel">
 					<div class="container">
@@ -87,37 +86,36 @@
 			</header>
 			<!-- HEADER end-->
 
-			<!-- Accordion data -->
-			<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
-			<!-- Accordion tpl -->
+			<div class="content">
+				<!-- Accordion data -->
+				<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
 
-			<div class="accordion">
-				<%	accordion.forEach((item, idx)=>{ %>
-					<div class="accordion__item<% if(!idx){ %>accordion__item--act<%}%>">
-						<div class="a-element">
-							<div class="a-element__item a-element__title"><%=item %></div>
-							<ul class="a-element__item a-element__list">
-								<li>Услуга или еще что-то</li>
-								<li>Подраздел заголовок из списка</li>
-								<li>Заголовок из списка</li>
-								<li>Подраздел из списка</li>
-								<li>Подраздел заголовок</li>
-							</ul>
-							<button class="a-element__item a-element__btn btn">подробнее</button>
+				<!-- Accordion tpl -->
+				<div class="accordion">
+					<%	accordion.forEach((item, idx)=>{ %>
+						<div class="accordion__item <% if(!idx){ %>accordion__item--act<%}%>">
+								<div class="accordion__inner accordion__title"><%=item %></div>
+								<ul class="accordion__inner accordion__list">
+									<li>Услуга или еще что-то</li>
+									<li>Подраздел заголовок из списка</li>
+									<li>Заголовок из списка</li>
+									<li>Подраздел из списка</li>
+									<li>Подраздел заголовок</li>
+								</ul>
+								<button class="accordion__inner accordion__btn btn">подробнее</button>
 						</div>
-					</div>
-				<%	});	%>
+					<%	});	%>
+				</div>
+
+
+				<div class="search">
+					<form action="/search/" method="get">
+						<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
+						<input class="search__submit" type="submit" value="найти">
+					</form>
+				</div>
 			</div>
 
-
-			<div class="search">
-				<form action="/search/" method="get">
-					<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
-					<input class="search__submit" type="submit" value="найти">
-				</form>
-			</div>
-
-		</div>
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
@@ -131,7 +129,6 @@
 			</div>
 		</footer>
 		<button href="#" class="scrollup">Наверх</button>
-	</div>
 </body>
 
 </html>

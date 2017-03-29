@@ -6,14 +6,21 @@
 *:after {
 	box-sizing: border-box;
 }
-.content {
-	overflow: hidden;
+html {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
-.body {
+body {
+	display: flex;
+	flex-direction: column;
+	flex: auto;
 	max-width: 1920px;
 	@include font;
 }
-
+.content {
+	flex-grow: 1;
+}
 body {
 	font-size: #{$base-font-size}px;
 	line-height: #{$base-line-height}px;

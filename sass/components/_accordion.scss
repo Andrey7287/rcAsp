@@ -1,0 +1,12 @@
+.accordion {
+	min-height: 473px;
+	max-height: 600px;
+	display: inline-flex;
+	&__item {
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}){
+				background: url(../images/accordion#{$i}.jpg) 50% 50% no-repeat;
+			}
+		}
+	}
+}

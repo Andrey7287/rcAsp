@@ -27,18 +27,6 @@ $('.c-hamburger').on('click', function(){
 	$('.site-nav').slideToggle();
 });
 
-/***********************
-******** FOOTER ********
-************************/
-
-$(window).on('load', function(){
-
-	setTimeout(function(){
-		var footerHeight = $('footer').outerHeight(true);
-		$('.content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
-	},1);
-
-});
 
 /**********************
 ********* MAP *********
