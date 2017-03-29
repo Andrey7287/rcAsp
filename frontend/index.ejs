@@ -12,56 +12,110 @@
 <body>
 	<div class="body">
 		<div class="content">
-			<header>
-				<div class="header">
+			<header class="header">
+				<div class="top-panel">
 					<div class="container">
+						<div class="top-panel__item">Комплексные услуги по созданию и развитию организаций, оптимизации бизнес-процессов</div>
+						<div class="top-panel__item">
+							<div class="control-panel">
+								<div class="control-panel__item">
+									<a href="#" class="search">Поиск</a>
+								</div>
+								<div class="control-panel__item">
+									<a href="#" class="log-in">Вход</a>
+								</div>
+								<div class="control-panel__item">
+									<a href="#" class="register">Регистрация</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-						<nav id="siteMenu">
-							<button class="c-hamburger c-hamburger--htx">
-								<span>toggle menu</span>
-							</button>
-							<!-- Site menu data -->
-							<%
-							var menuItems = ['О&nbsp;нас','Каталог','Статьи','Отзывы','Контакты']
-							%>
-							<!-- Site menu template -->
-							<ul class="site-nav">
-							<%menuItems.forEach((item, idx)=>{%>
-
-								<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
-									<a href=""><%=item %></a>
-								</li>
-							<%});%>
-							</ul>
-							.
-						</nav>
-
+				<div class="container">
+					<div class="header-inner">
+						<div class="header-inner__item">
+							<div class="site-logo">
+								<img src="./images/logo.svg" alt="">
+							</div>
+						</div>
+						<div class="header-inner__item">
+							<div class="site-nav-panel">
+								<button class="c-hamburger c-hamburger--htx">
+									<span>toggle menu</span>
+								</button>
+								<nav class="site-nav-outer">
+									<!-- Site menu data -->
+									<%
+									var menuItems = [
+										{'о&nbsp;компании': './about'},
+										{'Услуги': './service.html'},
+										{'Сотрудничество': './inner.html'},
+										{'Карьера': './inner2.html'},
+										{'Пресс-центр': './inner3.html' },
+										{'Контакты': './contacts.html' }
+									]
+									%>
+										<!-- Site menu template -->
+										<ul class="site-nav">
+											<%	menuItems.forEach((item, idx)=>{
+											for (key in item) { %>
+												<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
+													<a href="<%=item[key] %>">
+														<%=key %>
+													</a>
+												</li>
+												<%	}
+										});	%>
+										</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="header-inner__item">
+							<div class="header-inner__img">
+								<img src="../images/excluzive.png" alt="" />
+							</div>
+						</div>
+						<div class="header-inner__item">
+							<div class="header-inner__phone">+7 (987) 654-32-10</div>
+							<div class="header-inner__phone">+7 (000) 000-00-00</div>
+							<button class="button">связаться с нами</button>
+						</div>
 					</div>
 				</div>
 
 			</header>
 			<!-- HEADER end-->
 
-			<div class="slider-wrapp">
-				<div class="slider">
-					<div class="slider__item">
-						<img src="images/slider1.jpg" alt="">
+			<!-- Accordion data -->
+			<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
+			<!-- Accordion tpl -->
+
+			<div class="accordion">
+				<%	accordion.forEach((item, idx)=>{ %>
+					<div class="accordion__item<% if(!idx){ %>accordion__item--act<%}%>">
+						<div class="a-element">
+							<div class="a-element__item a-element__title"><%=item %></div>
+							<ul class="a-element__item a-element__list">
+								<li>Услуга или еще что-то</li>
+								<li>Подраздел заголовок из списка</li>
+								<li>Заголовок из списка</li>
+								<li>Подраздел из списка</li>
+								<li>Подраздел заголовок</li>
+							</ul>
+							<button class="a-element__item a-element__btn btn">подробнее</button>
+						</div>
 					</div>
-					<div class="slider__item">
-						<img src="images/slider2.jpg" alt="">
-					</div>
-				</div>
-				<button class="slider-arrow left">previos</button>
-				<button class="slider-arrow right">next</button>
-				<div class="slider-dots"></div>
+				<%	});	%>
 			</div>
 
-								<div class="search">
-									<form action="/search/" method="get">
-										<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
-										<input class="search__submit" type="submit" value="найти">
-									</form>
-								</div>
+
+			<div class="search">
+				<form action="/search/" method="get">
+					<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
+					<input class="search__submit" type="submit" value="найти">
+				</form>
+			</div>
 
 		</div>
 		<footer class="footer">

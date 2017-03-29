@@ -92,3 +92,19 @@ $(document).scroll(function(){
 });
 
 $('.scrollup').scrollUp();
+
+/**************************
+****** Smooth scroll ******
+***************************/
+
+$('a[href^="#"]').click(function(e){
+
+	e.preventDefault();
+
+	var target = $(this).attr('href'),
+			//headerHeight = $('header').outerHeight(),
+			scrollTo = $(''+target).offset().top;
+
+	$('html, body').animate({scrollTop: scrollTo}, 800);
+
+});
