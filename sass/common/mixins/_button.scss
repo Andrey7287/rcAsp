@@ -1,0 +1,28 @@
+@mixin button($size: 14, $color: $red, $color2: #fff, $invert: false) {
+	@include font($size, $size, 700, $base-font-size, $roboto);
+	padding: ($size - 4)+px;
+	background: transparent;
+	color: $color;
+	border: 3px solid $color;
+	border-radius: 4px;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in;
+
+	@if $invert == invert {
+		color: $color2;
+		border: 3px solid $color2;
+		background: $color;
+	}
+
+	&:hover {
+		color: $color2;
+		border: 3px solid $color2;
+		background: $color;
+
+		@if $invert == invert {
+			color: $color;
+			border: 3px solid $color;
+			background: transparent;
+		}
+	}
+}

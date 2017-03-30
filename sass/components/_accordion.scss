@@ -1,11 +1,23 @@
 .accordion {
 	min-height: 473px;
 	max-height: 600px;
-	display: inline-flex;
+	display: flex;
 	&__item {
 		@for $i from 1 through 6 {
 			&:nth-child(#{$i}){
 				background: url(../images/accordion#{$i}.jpg) 50% 50% no-repeat;
+			}
+		}
+		&_act {
+			width: 40%;
+		}
+		.service {
+			display: table;
+			width: 100%;
+			height: 100%;
+			&__inner {
+				display: table-cell;
+				vertical-align: bottom;
 			}
 		}
 	}

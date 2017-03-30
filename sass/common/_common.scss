@@ -176,3 +176,14 @@ table {
 		}
 	}
 }
+.btn {
+	&_r {
+		@include button;
+	}
+	&_w {
+		@include button(19, #fff, $menu);
+	}
+	&_ri {
+		@include button($invert: invert);
+	}
+}

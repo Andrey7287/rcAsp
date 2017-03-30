@@ -1,8 +1,4 @@
-
-.site-logo {
-	width: 100px;
-}
-
+/* TOP PANEL */
 .top-panel {
 	background: #6b8fd3;
 	&__inner {
@@ -24,10 +20,12 @@
 			flex-grow: 1;
 			text-align: right;
 			&:first-child {
-				a {
+				width: 44%;
+				.control-panel__link {
 					display: inline-block;
 					&::before {
 						top: 13px;
+						left: 8px;
 					}
 				}
 			}
@@ -38,11 +36,12 @@
 			padding: 6px 20px 6px 35px;
 			color: #fff;
 			position: relative;
+			transition: background 0.2s ease-in;
 			&::before {
 				content: " ";
 				display: block;
 				position: absolute;
-				left: 12px;
+				left: 15px;
 				top: 11px;
 			}
 			&_search {
@@ -60,6 +59,63 @@
 					@include sprite($ico-lock);
 				}
 			}
+			&:hover,
+			&:active,
+			&:focus {
+				background: #4f699b;
+			}
 		}
 	}
 }
+/*INNER*/
+.site-logo {
+	width: 165px;
+	height: 124px;
+	.cls-1{
+		fill:#124c8e;
+		transition: fill 0.3s ease-in;
+	}
+	.cls-2{
+		fill:#373a3b;
+	}
+	&:hover {
+		.cls-1 {
+			fill: $red;
+		}
+	}
+}
+.header-inner {
+	display: flex;
+	padding: 15px 0;
+	align-items: flex-end;
+	&__logo {
+		line-height: 0;
+		display: block;
+		margin-right: 15px;
+	}
+	&__img {
+		display: block;
+		width: 100px;
+		margin: 0 15px 10px;
+		img {
+			transition: transform 0.2s ease-in;
+		}
+		&:hover{
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+	.site-nav-panel {
+		flex-grow: 1;
+		margin: 0 15px;
+	}
+	&__item {
+		&:last-child {
+			margin: 0 0 10px 15px;
+		}
+	}
+}
+
+
+
