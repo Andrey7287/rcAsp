@@ -6,46 +6,53 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
 </head>
 
 <body>
 
-			<header class="header">
-				<div class="top-panel">
-					<div class="container">
-						<div class="top-panel__item">Комплексные услуги по созданию и развитию организаций, оптимизации бизнес-процессов</div>
-						<div class="top-panel__item">
-							<div class="control-panel">
-								<div class="control-panel__item">
-									<a href="#" class="search">Поиск</a>
-								</div>
-								<div class="control-panel__item">
-									<a href="#" class="log-in">Вход</a>
-								</div>
-								<div class="control-panel__item">
-									<a href="#" class="register">Регистрация</a>
-								</div>
+	<header class="header">
+		<div class="top-panel">
+			<div class="top-panel__inner container">
+				<div class="top-panel__item">Комплексные услуги по созданию и развитию организаций, оптимизации бизнес-процессов</div>
+				<div class="top-panel__item">
+					<div class="control-panel">
+						<div class="control-panel__item">
+							<a href="#" class="control-panel__link control-panel__link_search">Поиск</a>
+							<div class="search" hidden>
+								<form action="/search/" method="get">
+									<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
+									<input class="search__submit" type="submit" value="найти">
+								</form>
 							</div>
+						</div>
+						<div class="control-panel__item">
+							<a href="#" class="control-panel__link control-panel__link_login">Вход</a>
+						</div>
+						<div class="control-panel__item">
+							<a href="#" class="control-panel__link control-panel__link_reg">Регистрация</a>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 
-				<div class="container">
-					<div class="header-inner">
-						<div class="header-inner__item">
-							<div class="site-logo">
-								<img src="./images/logo.svg" alt="">
-							</div>
-						</div>
-						<div class="header-inner__item">
-							<div class="site-nav-panel">
-								<button class="c-hamburger c-hamburger--htx">
+		<div class="container">
+			<div class="header-inner">
+				<div class="header-inner__item">
+					<div class="site-logo">
+						<img src="./images/logo.svg" alt="">
+					</div>
+				</div>
+				<div class="header-inner__item">
+					<div class="site-nav-panel">
+						<button class="c-hamburger c-hamburger--htx">
 									<span>toggle menu</span>
 								</button>
-								<nav class="site-nav-outer">
-									<!-- Site menu data -->
-									<%
+						<nav class="site-nav-outer">
+							<!-- Site menu data -->
+							<%
 									var menuItems = [
 										{'о&nbsp;компании': './about'},
 										{'Услуги': './service.html'},
@@ -55,80 +62,282 @@
 										{'Контакты': './contacts.html' }
 									]
 									%>
-										<!-- Site menu template -->
-										<ul class="site-nav">
-											<%	menuItems.forEach((item, idx)=>{
-											for (key in item) { %>
-												<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
-													<a href="<%=item[key] %>">
-														<%=key %>
-													</a>
-												</li>
-												<%	}
+								<!-- Site menu template -->
+								<ul class="site-nav">
+									<%	menuItems.forEach((item, idx)=>{
+										for (key in item) { %>
+											<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
+												<a href="<%=item[key] %>">
+													<%=key %>
+												</a>
+											</li>
+										<%	}
 										});	%>
-										</ul>
-								</nav>
-							</div>
-						</div>
-						<div class="header-inner__item">
-							<div class="header-inner__img">
-								<img src="../images/excluzive.png" alt="" />
-							</div>
-						</div>
-						<div class="header-inner__item">
-							<div class="header-inner__phone">+7 (987) 654-32-10</div>
-							<div class="header-inner__phone">+7 (000) 000-00-00</div>
-							<button class="button">связаться с нами</button>
-						</div>
+								</ul>
+						</nav>
 					</div>
 				</div>
-
-			</header>
-			<!-- HEADER end-->
-
-			<div class="content">
-				<!-- Accordion data -->
-				<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
-
-				<!-- Accordion tpl -->
-				<div class="accordion">
-					<%	accordion.forEach((item, idx)=>{ %>
-						<div class="accordion__item <% if(!idx){ %>accordion__item--act<%}%>">
-								<div class="accordion__inner accordion__title"><%=item %></div>
-								<ul class="accordion__inner accordion__list">
-									<li>Услуга или еще что-то</li>
-									<li>Подраздел заголовок из списка</li>
-									<li>Заголовок из списка</li>
-									<li>Подраздел из списка</li>
-									<li>Подраздел заголовок</li>
-								</ul>
-								<button class="accordion__inner accordion__btn btn">подробнее</button>
-						</div>
-					<%	});	%>
+				<div class="header-inner__item">
+					<div class="header-inner__img">
+						<img src="../images/excluzive.png" alt="" />
+					</div>
 				</div>
-
-
-				<div class="search">
-					<form action="/search/" method="get">
-						<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
-						<input class="search__submit" type="submit" value="найти">
-					</form>
+				<div class="header-inner__item">
+					<div class="header-inner__phone">+7 (987) 654-32-10</div>
+					<div class="header-inner__phone">+7 (000) 000-00-00</div>
+					<button class="btn btn-r">связаться с нами</button>
 				</div>
 			</div>
+		</div>
 
-		<footer class="footer">
+	</header>
+	<!-- HEADER end-->
+
+	<div class="content">
+		<!-- Accordion data -->
+		<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
+
+		<!-- Accordion tpl -->
+		<div class="accordion">
+			<%	accordion.forEach((item, idx)=>{ %>
+				<div class="accordion__item <% if(!idx){ %>accordion__item--act<%}%>">
+					<div class="accordion__inner accordion__title">
+						<%=item %>
+					</div>
+					<ul class="accordion__inner accordion__list">
+						<li>Услуга или еще что-то</li>
+						<li>Подраздел заголовок из списка</li>
+						<li>Заголовок из списка</li>
+						<li>Подраздел из списка</li>
+						<li>Подраздел заголовок</li>
+					</ul>
+					<button class="btn btn-w">подробнее</button>
+				</div>
+				<%	});	%>
+		</div>
+
+		<div class="about-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<h2><span class="upercase">Об&nbsp;Агентстве</span><br />стратегического<br />развития бизнеса </h2>
+						<p>Социальный статус разрушаем. Быличка существенно искажает критерий сходимости Коши. Мифопорождающее текстовое устройство начинает экспериментальный поток сознания, и это ясно видно в следующем отрывке.</p>
+						<p>Математический анализ иллюстрирует невероятный возврат к стереотипам. Особую ценность, на наш взгляд, представляет бином Ньютона однородно изменяет верлибр.</p>
+						<button class="btn btn-w">подробнее</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<!-- Reason data -->
+				<%
+					var reasons = [
+						{'причин': 'работать с нами'},
+						{'№1 на рынке': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно.'},
+						{'Комплексные решения': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
+						{'Индивидуальный подход': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
+						{'Наши клиенты —<br />наши партнеры': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+						{'100% гарантия результата': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+						{'Консультации 7/365': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+						{'Высокие<br />стандарты качества': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+					]
+				%>
+				<!-- Reason template -->
+
+				<%	reasons.forEach((item, idx)=>{
+						for (key in item) { %>
+						<div class="col-md-3">
+							<a href="" class="reason">
+								<div class="reason__img">
+									<img src="./images/causes<%=idx %>.png" alt="" />
+								</div>
+								<div class="text-outer">
+									<div class="reason__title"><%=key %></div>
+									<div class="reason__txt"><%=item[key] %></div>
+								</div>
+							</a>
+						</div>
+					<%	}
+				});	%>
+			</div>
+		</div>
+
+		<!-- SLIDERS -->
+		<!-- SLIDER1 -->
+		<div class="aqua-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10"><h2>с нами уже работают</h2></div>
+					<div class="col-xs-2">
+						<div class="slider-arrow left partner-left">previous</div>
+						<div class="slider-arrow right partner-right">next</div>
+					</div>
+					<% for(var i = 0; i < 9; i++){%>
+					<div class="partner-slider">
+						<div class="col-lg-2">
+							<div class="partner-slider__item">
+								<img src="./images/partner-thumb.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+		<!-- SLIDER2 -->
+		<div class="aqua-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="head-with-btn">
+							<h2>с нами уже работают</h2>
+							<button class="btn btn-r">Все предложения партнеров</button>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<div class="slider-arrow left discont-left">previous</div>
+						<div class="slider-arrow right discont-right">next</div>
+					</div>
+					<% for(var i = 0; i < 9; i++){%>
+					<div class="discont-slider">
+						<div class="col-lg-3">
+							<div class="discont-slider__item">
+								<img src="./images/partner-thumb.jpg" alt="" />
+								<div class="discont-slider__company">название компании</div>
+								<div class="discont-slider__scope">Сфера деятельности компании</div>
+								<div class="discont-slider__prof">Категория услуг, например, отмывание чапельников</div>
+								<div class="discont-slider__val">-60%</div>
+							</div>
+						</div>
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+		<!-- SLIDER3 -->
+		<div class="aqua-block">
+			<div class="container">
+				<h2>новости</h2>
+				<div class="row">
+					<% for(var i = 1; i < 6; i++){%>
+					<div class="news-slider">
+						<div class="col-lg-3">
+							<div class="news-slider__item">
+								<div class="news">
+									<div class="news__link">
+										<img src="./images/news<%=i %>.jpg" alt="" />
+										<div class="news__date">10.02.2017</div>
+										<div class="news__title">Жизненный цикл продукции</div>
+									</div>
+									<div class="news__txt">
+										Cтоящих между ударениями, представляет собой предел последовательности, такого мнения придерживаются многие депутаты Государственной Думы.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="row">
+
+					<%	var footerNav = [
+							{'О&nbsp;компании': [
+								'Направленный маркетинг',
+								'Небезынтересно',
+								'Реформаторский',
+								'Пафос'
+								]
+							},{'Услуги': [
+								'Направленный маркетинг',
+								'Небезынтересно изменяет',
+								'Реформаторский',
+								'Пафос',
+								'Придерживаясь принципово',
+								'Дарвинизма',
+								'Монтескье'
+								]
+							},
+							{'Пункт меню': [
+								'Направленный',
+								'Небезынтересно',
+								'Реформаторский',
+								'Пафос',
+								'Маркетинг',
+								'Амбивалентность',
+								'Угроза мира'
+								]
+							},
+							{'Еще раздел': [
+								'Направленный маркетинг',
+								'Небезынтересно',
+								'Реформаторский',
+								'Пафос',
+								'Придерживаясь',
+								'Дарвинизма',
+								'Дарвинизма'
+								]}
+						]
+					%>
+
+					<%	footerNav.forEach((item, idx)=>{
+							for (key in item) { %>
+							<div class="col-md-2">
+								<div class="footer-nav">
+									<div class="footer-nav__title">
+										<%=key %>
+									</div>
+									<ul class="footer-nav__menu">
+										<%	item[key].forEach((item)=>{	%>
+											<li><%=item %></li>
+										<%	});	%>
+									</ul>
+								</div>
+							</div>
+						<%	}
+					});	%>
+
+					<div class="co-md-4">
+						<div class="footer-nav">
+							<div class="footer-nav__title">
+								Контакты
+							</div>
+							<div class="footer-nav__contacts">
+								Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+								<div class="footer-nav__phone">+7 (987) 654- 32-10</div>
+								<div class="footer-nav__phone">+7 (000) 000-00-00</div>
+								<a href="mailto:info@aaspekt.ru">info@aaspekt.ru</a>
+							</div>
+							<button class="btn btn-wr">связаться с нами</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6">
-						<div class="copyright">© Lorem ipsum dolor sit amet. 2017</div>
+						<div class="copyright">© А.Аспект. Агентство стратегического развития бизнеса. 2017</div>
 					</div>
 					<div class="col-xs-6">
-						<a href="http://infodesign.ru/" class="infodisign">© Создание сайта и дизайн «Инфодизайн» 2017</a>
+						<a href="http://infodesign.ru/" class="infodisign">© Создание сайта и дизайн «ИнфоДизайн» 2017</a>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<button href="#" class="scrollup">Наверх</button>
+		</div>
+	</footer>
+	<button href="#" class="scrollup">Наверх</button>
 </body>
 
 </html>

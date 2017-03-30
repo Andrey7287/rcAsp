@@ -35,7 +35,8 @@ p {
 
 //Nav
 
-nav ul {
+nav ul,
+footer ul{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -56,8 +57,9 @@ textarea {
 // Links
 
 a {
-	@include link($link, $link-hov)
-	&[href^="mailto"]{
+	text-decoration: none;
+	color: $default-color;
+	a[href^="mailto"]{
 		//@include link(#004b62);
 	}
 }

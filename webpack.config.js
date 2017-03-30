@@ -88,6 +88,7 @@ if (isProd) {
 module.exports = {
 	devtool: isProd ? 'source-map' : 'cheap-module-source-map',
 	entry: {
+		/*vendor: ['jquery'],*/
 		js: ['./frontend/main']
 	},
 	output: {
@@ -163,7 +164,7 @@ module.exports = {
 	devServer: {
 		open: true,
 		historyApiFallback: true,
-		port: 3000,
+		port: 4000,
 		hot: true,
 		stats: { colors: true },
 	}
