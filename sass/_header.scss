@@ -11,6 +11,7 @@
 		font-family: $roboto;
 		&:last-child {
 			flex-grow: 1;
+			padding-left: 15px;
 		}
 	}
 	.control-panel {
@@ -67,6 +68,32 @@
 		}
 	}
 }
+
+/*SEARCH*/
+
+.search {
+	position: relative;
+	display: inline-block;
+	display: none;
+	margin: 6px 0;
+	width: 0px;
+	&__input {
+		padding: 0 30px 0 10px;
+		background: #fff;
+		border: 0;
+		width:100%;
+	}
+	&__submit {
+		position: absolute;
+		top: 7px;
+		right: 8px;
+		border: 0;
+		text-indent: -9999px;
+		background: none;
+		@include sprite($ico-search-blue);
+	}
+}
+
 /*INNER*/
 .site-logo {
 	width: 165px;

@@ -1,7 +1,152 @@
 .about-block {
-
+	padding: 15px 0 100px;
+	background: url(../images/bkg-mblock.jpg) 50% 50% no-repeat, linear-gradient(to right, #fff 20%,#3c4a73 20%,#3c4a73 80%,#fff 80%);
+	color: #fff;
+	.h2, h2 {
+		color: #fff;
+		line-height: 1;
+	}
+	p {
+		@include font(18,$font: $roboto);
+	}
+	.btn {
+		float: right;
+	}
 }
 
+/* REASONS MOZAIK */
+.reason-outer {
+	padding: 15px 0;
+}
+.reason {
+	display: block;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	text-align: center;
+	&__img {
+		position: relative;
+		padding-bottom: 90px;
+		&::after {
+			content: " ";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-family: $roboto;
+		color: #0c445e;
+		text-transform: uppercase;
+	}
+	&__txt {
+		@include font(14,22,$font: $roboto);
+	}
+	&:first-child {
+		position: relative;
+		.reason__img {
+			text-align: center;
+			padding: 0;
+			img {
+				display: inline-block;
+			}
+		}
+		.text-outer {
+			position: absolute;
+			top: 35%;
+			left: 0;
+			right: 0;
+			background: #fff;
+			color: $header;
+			padding: 5px 0;
+		}
+		.reason__title {
+			@include font(32,30,700,$font: $roboto-c);
+		}
+		.reason__txt {
+			@include font(30,30,$font: $roboto-c);
+		}
+	}
+	&:hover {
+		.reason__title {
+			color: $red;
+		}
+	}
+	&:nth-child(2){
+		.reason__img::after {
+			@include sprite($causes2);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes2-hov);
+			}
+		}
+	}
+	&:nth-child(3){
+		.reason__img::after {
+			@include sprite($causes3);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes3-hov);
+			}
+		}
+	}
+	&:nth-child(4){
+		.reason__img::after {
+			@include sprite($causes4);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes4-hov);
+			}
+		}
+	}
+	&:nth-child(5){
+		.reason__img::after {
+			@include sprite($causes5);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes5-hov);
+			}
+		}
+	}
+	&:nth-child(6){
+		.reason__img::after {
+			@include sprite($causes6);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes6-hov);
+			}
+		}
+	}
+	&:nth-child(7){
+		.reason__img::after {
+			@include sprite($causes7);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes7-hov);
+			}
+		}
+	}
+	&:nth-child(8){
+		.reason__img::after {
+			@include sprite($causes8);
+		}
+		&:hover {
+			.reason__img::after {
+				@include sprite($causes8-hov);
+			}
+		}
+	}
+}
 .aqua-block {
 
 }
+

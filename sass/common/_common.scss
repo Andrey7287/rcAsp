@@ -36,7 +36,7 @@ p {
 //Nav
 
 nav ul,
-footer ul{
+footer ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -85,9 +85,9 @@ body h1, .h1 {
 	}
 }
 body h2, .h2 {
-	@include font(30, 32, 700);
+	@include font(32, 36,$font: $roboto-c);
 	color: $header;
-	margin: 15px 0;
+	margin: 25px 0;
 }
 body h3, .h3 {
 	@include font(20, 24, 700);
@@ -107,22 +107,17 @@ body h4, .h4, body h5, .h5 {
 
 //Lists
 
-.inner ul {
-	margin: 7px 0;
+.inner ul,
+.accordion ul {
+	margin: 0.5em 0;
 	padding: 0;
 	list-style: none;
 	li {
 		font-size: 1.1em;
-		padding: 5px 0;
+		padding: 0.3em 0;
 		&::before{
-			content: "";
+			content: "—";
 			display: inline-block;
-			width: 0;
-			height: 0;
-			border-top: 6px solid transparent;
-			border-left: 12px solid $link;
-			border-bottom: 6px solid transparent;
-			margin-right: 10px;
 		}
 	}
 }
@@ -186,4 +181,7 @@ table {
 	&_ri {
 		@include button($invert: invert);
 	}
+}
+.upercase {
+	text-transform: uppercase;
 }

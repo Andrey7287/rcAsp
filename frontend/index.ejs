@@ -19,10 +19,10 @@
 				<div class="top-panel__item">
 					<div class="control-panel">
 						<div class="control-panel__item">
-							<a href="#" class="control-panel__link control-panel__link_search">Поиск</a>
-							<div class="search" hidden>
+							<a href="" id="topSearch" class="control-panel__link control-panel__link_search">Поиск</a>
+							<div class="search">
 								<form action="/search/" method="get">
-									<input class="search__input" type="text" name="q" placeholder="Введите строку для поиска">
+									<input class="search__input" type="text" name="q" placeholder="Поиск по сайту">
 									<input class="search__submit" type="submit" value="найти">
 								</form>
 							</div>
@@ -93,31 +93,36 @@
 
 	<div class="content">
 		<!-- Accordion data -->
-		<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении']	%>
+		<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении'],
+				list =	['Услуга или еще что-то','Подраздел заголовок из списка','Заголовок из списка','Подраздел из списка','Подраздел заголовок']
+
+		%>
 
 		<!-- Accordion tpl -->
-		<div class="accordion">
-			<%	accordion.forEach((item, idx)=>{ %>
-				<div class="accordion__item <% if(!idx){ %>accordion__item_act<%}%>">
-					<div class="service">
-						<div class="service__inner">
-							<div class="service__title">
-								<%=item %>
-							</div>
-							<ul class="service__list" hidden>
-								<li>Услуга или еще что-то</li>
-								<li>Подраздел заголовок из списка</li>
-								<li>Заголовок из списка</li>
-								<li>Подраздел из списка</li>
-								<li>Подраздел заголовок</li>
-							</ul>
-							<div class="service__btn" hidden>
-								<button class="btn btn_w">подробнее</button>
+		<div class="accordion-outer">
+			<div class="accordion">
+				<%	accordion.forEach((item, idx)=>{ %>
+					<div class="accordion__item <% if(!idx){ %>accordion__item_act<%}%>">
+						<div class="service">
+							<div class="service__inner">
+								<div class="service__content">
+									<div class="service__title">
+										<%=item %>
+									</div>
+									<ul class="service__list">
+										<%	for (l = 0; l < idx; l++){	%>
+											<li><%=list[l] %></li>
+										<%	} %>
+									</ul>
+									<div class="service__btn">
+										<button class="btn btn_w">подробнее</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<%	});	%>
+					<%	});	%>
+			</div>
 		</div>
 
 		<div class="about-block">
@@ -127,44 +132,44 @@
 						<h2><span class="upercase">Об&nbsp;Агентстве</span><br />стратегического<br />развития бизнеса </h2>
 						<p>Социальный статус разрушаем. Быличка существенно искажает критерий сходимости Коши. Мифопорождающее текстовое устройство начинает экспериментальный поток сознания, и это ясно видно в следующем отрывке.</p>
 						<p>Математический анализ иллюстрирует невероятный возврат к стереотипам. Особую ценность, на наш взгляд, представляет бином Ньютона однородно изменяет верлибр.</p>
-						<button class="btn btn_w">подробнее</button>
+						<button class="btn btn_w">Узнать больше</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="container">
-			<div class="row">
-				<!-- Reason data -->
-				<%
-					var reasons = [
-						{'причин': 'работать с нами'},
-						{'№1 на рынке': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно.'},
-						{'Комплексные решения': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
-						{'Индивидуальный подход': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
-						{'Наши клиенты —<br />наши партнеры': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-						{'100% гарантия результата': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-						{'Консультации 7/365': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-						{'Высокие<br />стандарты качества': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-					]
-				%>
-				<!-- Reason template -->
+			<div class="reason-outer">
+				<div class="row">
+					<!-- Reason data -->
+					<%
+						var reasons = [
+							{'причин': 'работать с нами'},
+							{'№1 на рынке': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно.'},
+							{'Комплексные решения': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
+							{'Индивидуальный подход': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
+							{'Наши клиенты —<br />наши партнеры': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+							{'100% гарантия результата': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+							{'Консультации 7/365': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+							{'Высокие<br />стандарты качества': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
+						]
+					%>
+					<!-- Reason template -->
 
-				<%	reasons.forEach((item, idx)=>{
+					<%	reasons.forEach((item, idx)=>{
 						for (key in item) { %>
-						<div class="col-md-3">
-							<a href="" class="reason">
+							<a href="" class="reason col-md-3">
 								<div class="reason__img">
-									<img src="./images/causes<%=idx %>.png" alt="" />
+									<%	if(!idx) {	%><img src="../images/causes1.png" alt="" />	<%	}	%>
 								</div>
 								<div class="text-outer">
 									<div class="reason__title"><%=key %></div>
 									<div class="reason__txt"><%=item[key] %></div>
 								</div>
 							</a>
-						</div>
-					<%	}
-				});	%>
+						<%	}
+					});	%>
+				</div>
 			</div>
 		</div>
 
@@ -173,20 +178,22 @@
 		<div class="aqua-block">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-10"><h2>с нами уже работают</h2></div>
-					<div class="col-xs-2">
-						<div class="slider-arrow left partner-left">previous</div>
-						<div class="slider-arrow right partner-right">next</div>
-					</div>
-					<% for(var i = 0; i < 9; i++){%>
-					<div class="partner-slider">
-						<div class="col-lg-2">
-							<div class="partner-slider__item">
-								<img src="./images/partner-thumb.jpg" alt="" />
-							</div>
+					<div class="slider-head">
+						<div class="col-xs-10"><h2>с нами уже работают</h2></div>
+						<div class="col-xs-2">
+							<div class="slider-arrow left partner-left">previous</div>
+							<div class="slider-arrow right partner-right">next</div>
 						</div>
 					</div>
+					<div class="partner-slider">
+					<% for(var i = 0; i < 9; i++){%>
+						<div class="col-lg-2">
+							<a href="" class="partner-slider__item">
+								<img src="./images/partner-thumb.jpg" alt="" />
+							</a>
+						</div>
 					<% } %>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -204,8 +211,8 @@
 						<div class="slider-arrow left discont-left">previous</div>
 						<div class="slider-arrow right discont-right">next</div>
 					</div>
-					<% for(var i = 0; i < 9; i++){%>
 					<div class="discont-slider">
+					<% for(var i = 0; i < 9; i++){%>
 						<div class="col-lg-3">
 							<div class="discont-slider__item">
 								<img src="./images/partner-thumb.jpg" alt="" />
@@ -215,18 +222,22 @@
 								<div class="discont-slider__val">-60%</div>
 							</div>
 						</div>
-					</div>
 					<% } %>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- SLIDER3 -->
-		<div class="aqua-block">
+		<div class="news-block">
 			<div class="container">
-				<h2>новости</h2>
 				<div class="row">
-					<% for(var i = 1; i < 6; i++){%>
+					<div class="col-xs-10"><h2>новости</h2></div>
+					<div class="col-xs-2">
+						<div class="slider-arrow left news-left">previous</div>
+						<div class="slider-arrow right news-right">next</div>
+					</div>
 					<div class="news-slider">
+					<% for(var i = 1; i < 6; i++){%>
 						<div class="col-lg-3">
 							<div class="news-slider__item">
 								<div class="news">
@@ -241,8 +252,8 @@
 								</div>
 							</div>
 						</div>
-					</div>
 					<% } %>
+					</div>
 				</div>
 			</div>
 		</div>

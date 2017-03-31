@@ -5,14 +5,17 @@ console.log(`jQuery ${$.fn.jquery} is loaded`);
 window.$ = $;
 window.jQuery = $;
 
+
 /* Import project styles and components */
+require('script-loader!slick-carousel');
 import '../sass/css.scss';
 import OnResize from './modules/resize';
+import ravno from './modules/ravno';
 import scrollup from './modules/scrollup';
 
 /* Define project components and variables */
 var	isMap = $('#map').is('#map'),
-		isSlider = $('.slider').is('.slider'),
+		isAccordion = $('.accordion').is('.accordion'),
 		mobileView = window.matchMedia("(max-width: 768px)").matches,
 		resizeAlign = new OnResize,
 		scrollTiming = 0,
@@ -44,20 +47,11 @@ if ( isMap ) {
 ******** SLIDER ********
 ************************/
 
-
-if ( isSlider ) {
-
-	require.ensure([], (require) => {
-		require('script-loader!slick-carousel/slick/slick.js');
-		$('.slider').slick({
-			prevArrow: $('.slider-arrow.left'),
-			nextArrow: $('.slider-arrow.right'),
-			dots: true,
-			appendDots: $('.slider-dots')
-		});
-	}, 'slick');
-
-}
+$('.partner-slider').slick({
+	prevArrow: $('.partner-left'),
+	nextArrow: $('.partner-right'),
+	slidesToShow: 6
+});
 
 /************************
 ******* Scroll Up *******
@@ -94,5 +88,43 @@ $('a[href^="#"]').click(function(e){
 			scrollTo = $(''+target).offset().top;
 
 	$('html, body').animate({scrollTop: scrollTo}, 800);
+
+});
+
+/**************************
+******** Accordion ********
+***************************/
+
+if ( isAccordion ){
+
+	$('.accordion').on('mouseover','.accordion__item',function(){
+		$(this).siblings().removeClass('accordion__item_act');
+		$(this).addClass('accordion__item_act');
+	});
+
+}
+
+$('.reason').ravno();
+
+/**************************
+******** Top search *******
+***************************/
+
+$('#topSearch').click(function(e){
+
+	e.preventDefault();
+
+	$(this).hide();
+
+	$(this).next().animate({
+		width: "190px",
+		paddingLeft: "show",
+		paddingRight: "show",
+		marginLeft: "show",
+		marginRight: "show"
+	});
+
+
+
 
 });
