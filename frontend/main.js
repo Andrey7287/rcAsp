@@ -17,9 +17,10 @@ import scrollup from './modules/scrollup';
 var	isMap = $('#map').is('#map'),
 		isAccordion = $('.accordion').is('.accordion'),
 		mobileView = window.matchMedia("(max-width: 768px)").matches,
-		resizeAlign = new OnResize,
-		scrollTiming = 0,
-		scrollTimingH = 0;
+		resizeReasons = new OnResize(true),
+		scrollTiming = 0;
+
+resizeReasons.bind(()=>$('.reason').ravno());
 
 /************************
 ****** Mobile menu ******
@@ -44,7 +45,7 @@ if ( isMap ) {
 }
 
 /***********************
-******** SLIDER ********
+******** SLIDERS ********
 ************************/
 
 $('.partner-slider').slick({
@@ -52,6 +53,20 @@ $('.partner-slider').slick({
 	nextArrow: $('.partner-right'),
 	slidesToShow: 6
 });
+
+$('.discont-slider').slick({
+	prevArrow: $('.discont-left'),
+	nextArrow: $('.discont-right'),
+	slidesToShow: 4
+});
+
+$('.news-slider').slick({
+	prevArrow: $('.news-left'),
+	nextArrow: $('.news-right'),
+	slidesToShow: 4
+});
+
+
 
 /************************
 ******* Scroll Up *******
@@ -103,8 +118,6 @@ if ( isAccordion ){
 	});
 
 }
-
-$('.reason').ravno();
 
 /**************************
 ******** Top search *******

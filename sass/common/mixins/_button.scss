@@ -6,7 +6,7 @@
 	border: 3px solid $color;
 	border-radius: 4px;
 	text-transform: uppercase;
-	transition: all 0.2s ease-in;
+	transition: all 0.3s ease-in;
 
 	@if $invert == invert {
 		color: $color2;
@@ -18,11 +18,12 @@
 		color: $color2;
 		border: 3px solid $color2;
 		background: $color;
+		box-shadow: 0 0 1px 0 $color;
 
 		@if $invert == invert {
 			color: $color;
 			border: 3px solid $color;
-			background: transparent;
+			background: $color2;
 		}
 	}
 }
