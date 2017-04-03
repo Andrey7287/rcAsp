@@ -1,14 +1,22 @@
 /* TOP PANEL */
 .top-panel {
 	background: #6b8fd3;
+	@include breakpoint(tablet){
+		font-size: 0.9em;
+	}
 	&__inner {
 		display: flex;
-		height: 42px;
 		align-items: center;
 	}
 	&__item {
 		color: #fff;
 		font-family: $roboto;
+		&:first-child {
+			line-height: 1.4;
+			@include breakpoint(middle){
+				flex-basis: 50%;
+			}
+		}
 		&:last-child {
 			flex-grow: 1;
 			padding-left: 15px;
@@ -17,9 +25,15 @@
 	.control-panel {
 		display: flex;
 		margin-right: -20px;
+		@include breakpoint(tablet) {
+			justify-content: flex-end;
+		}
 		&__item {
 			flex-grow: 1;
 			text-align: right;
+			@include breakpoint(tablet){
+				flex-grow: unset;
+			}
 			&:first-child {
 				width: 44%;
 				.control-panel__link {
@@ -38,6 +52,10 @@
 			color: #fff;
 			position: relative;
 			transition: background 0.2s ease-in;
+			@include breakpoint(tablet){
+				display: inline-block;
+				font-size: 0;
+			}
 			&::before {
 				content: " ";
 				display: block;

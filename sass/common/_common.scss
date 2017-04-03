@@ -58,7 +58,7 @@ textarea {
 
 a {
 	text-decoration: none;
-	color: $default-color;
+	display: inline-block;
 	a[href^="mailto"]{
 		//@include link(#004b62);
 	}
@@ -85,9 +85,15 @@ body h1, .h1 {
 	}
 }
 body h2, .h2 {
-	@include font(32, 36,$font: $roboto-c);
+	@include font(32, 36,700,$font: $roboto-c);
+	text-transform: uppercase;
 	color: $header;
-	margin: 25px 0;
+	margin: 15px 0;
+	.low {
+		text-transform: none;
+		font-weight: 400;
+		display: block;
+	}
 }
 body h3, .h3 {
 	@include font(20, 24, 700);

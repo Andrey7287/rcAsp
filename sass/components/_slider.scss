@@ -1,25 +1,123 @@
+.aqua-block {
+	background: #ecf4fa;
+	padding: 17px 0 25px;
+}
+/* Layout */
 .slider-head {
 	@include clearfix;
-}
-/**** ARROWS ****/
-.slider-arrow {
-	text-indent: -9999px;
-	&:hover {
-		cursor: pointer;
+	display: flex;
+	margin: 18px 0;
+	&__item {
+		display: inline-flex;
+		&:first-child {
+			flex:1;
+		}
 	}
-	&.left {
-		left: 13px;
-		@include sprite($arrow_left);
+	&__btn {
+		display: flex;
+		align-items: center;
+		.btn {
+			padding: 16px 18px;
+			margin-left: 40px;
+		}
 	}
-	&.right {
-		right: 13px;
-		@include sprite($arrow_right);
+	&__arrows {
+		display: flex;
+		align-items: center;
+	}
+	.arrow {
+		&__item {
+			padding: 5px 10px;
+			background: #fff;
+			margin-left: 5px;
+			border: 1px solid #fff;
+			transition: all 0.2s ease-in;
+			.news-block & {
+				background: #ecf4fa;
+			}
+			&:hover {
+				border: 1px solid #6b8fd3;
+			}
+			&_left,
+			&_right {
+				font-size: 0;
+				line-height: 0;
+				&::after {
+					content: " ";
+					display: inline-block;
+				}
+			}
+			&_left{
+				&::after {
+					@include sprite($arrow_left);
+				}
+			}
+			&_right {
+				&::after {
+					@include sprite($arrow_right);
+				}
+			}
+		}
 	}
 }
 
-/**** SLIDER 1 ****/
-
-.partner-slider {
-	@include clearfix;
+.discont-slider {
+	&__item{
+		text-align: center;
+		background: #fff;
+		padding: 15px 10px;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+		color: $header;
+		img {
+			display: inline-block;
+		}
+	}
+	&__company {
+		@include font(18,22,$font: $roboto-c);
+		margin: 5px 0;
+	}
+	&__scope {
+		@include font(16,20,$font: $roboto-c);
+		color: #777;
+		text-transform: none;
+	}
+	&__prof {
+		@include font(20,24,700,$font: $roboto-c);
+		margin: 25px 0 7px;
+	}
+	&__val {
+		@include font(60,60,700,$font: $roboto-c);
+		color: $red;
+	}
+}
+.news-block {
+	padding: 65px 0;
+	h2, .h2 {
+		@include font(30,30,700,$font: $roboto-c);
+	}
 }
 
+.news {
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 7px;
+		img {
+			margin-bottom: 15px;
+		}
+	}
+	&__date {
+		width: 26%;
+		@include font(20,24,700,$font: $roboto);
+		color: #6b8fd3;
+	}
+	&__title {
+		width: 74%;
+		@include font(16,24,700,$font: $roboto);
+	}
+	&__txt {
+		@include font(14,20,$font: $roboto);
+		color: $grey;
+	}
+}

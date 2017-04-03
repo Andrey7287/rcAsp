@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
 </head>
@@ -177,87 +177,115 @@
 		<!-- SLIDER1 -->
 		<div class="aqua-block">
 			<div class="container">
-				<div class="row">
-					<div class="slider-head">
-						<div class="col-xs-10"><h2>с нами уже работают</h2></div>
-						<div class="col-xs-2">
-							<div class="slider-arrow left partner-left">previous</div>
-							<div class="slider-arrow right partner-right">next</div>
+				<div class="slider-head">
+					<div class="slider-head__item"><h2>с нами уже работают</h2></div>
+					<div class="slider-head__item">
+						<div class="slider-head__arrows">
+							<div class="arrow">
+								<button class="arrow__item arrow__item_left partner-left">
+									previous
+								</button>
+							</div>
+							<div class="arrow">
+								<button class="arrow__item arrow__item_right partner-right">
+									next
+								</button>
+							</div>
 						</div>
 					</div>
-					<div class="partner-slider">
-					<% for(var i = 0; i < 9; i++){%>
-						<div class="col-lg-2">
-							<a href="" class="partner-slider__item">
-								<img src="./images/partner-thumb.jpg" alt="" />
-							</a>
-						</div>
-					<% } %>
+				</div>
+				<div class="partner-slider row">
+				<% for(var i = 0; i < 9; i++){%>
+					<div class="col-lg-2">
+						<a href="" class="partner-slider__item">
+							<img src="./images/partner-thumb.jpg" alt="" />
+						</a>
 					</div>
+				<% } %>
 				</div>
 			</div>
 		</div>
 		<!-- SLIDER2 -->
 		<div class="aqua-block">
 			<div class="container">
-				<div class="row">
-					<div class="slider-head">
-						<div class="col-xs-10">
-							<div class="head-with-btn">
-								<h2>с нами уже работают</h2>
+				<div class="slider-head">
+					<div class="slider-head__item">
+
+							<h2>Эксклюзивные предложения<span class="low">на услуги наших партнеров</span></h2>
+							<div class="slider-head__btn">
 								<button class="btn btn_r">Все предложения партнеров</button>
 							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="slider-arrow left discont-left">previous</div>
-							<div class="slider-arrow right discont-right">next</div>
-						</div>
+
 					</div>
-					<div class="discont-slider">
-					<% for(var i = 0; i < 9; i++){%>
-						<div class="col-lg-3">
-							<div class="discont-slider__item">
-								<img src="./images/partner-thumb.jpg" alt="" />
-								<div class="discont-slider__company">название компании</div>
-								<div class="discont-slider__scope">Сфера деятельности компании</div>
-								<div class="discont-slider__prof">Категория услуг, например, отмывание чапельников</div>
-								<div class="discont-slider__val">-60%</div>
+					<div class="slider-head__item">
+						<div class="slider-head__arrows">
+							<div class="arrow">
+								<button class="arrow__item arrow__item_left discont-left">
+									previous
+								</button>
+							</div>
+							<div class="arrow">
+								<button class="arrow__item arrow__item_right discont-right">
+									next
+								</button>
 							</div>
 						</div>
-					<% } %>
 					</div>
+				</div>
+				<div class="discont-slider row">
+				<% for(var i = 0; i < 9; i++){%>
+					<div class="col-lg-3">
+						<div class="discont-slider__item">
+							<img src="./images/partner-thumb.jpg" alt="" />
+							<div class="discont-slider__company">название компании</div>
+							<div class="discont-slider__scope">Сфера деятельности компании</div>
+							<div class="discont-slider__prof">Категория услуг, например, отмывание чапельников</div>
+							<div class="discont-slider__val">-60%</div>
+						</div>
+					</div>
+				<% } %>
 				</div>
 			</div>
 		</div>
 		<!-- SLIDER3 (NEWS)-->
 		<div class="news-block">
 			<div class="container">
-				<div class="row">
-					<div class="slider-head">
-						<div class="col-xs-10"><h2>новости</h2></div>
-						<div class="col-xs-2">
-							<div class="slider-arrow left news-left">previous</div>
-							<div class="slider-arrow right news-right">next</div>
+				<div class="slider-head">
+					<div class="slider-head__item"><h2>новости</h2></div>
+					<div class="slider-head__item">
+						<div class="slider-head__arrows">
+							<div class="arrow">
+								<button class="arrow__item arrow__item_left news-left">
+									previous
+								</button>
+							</div>
+							<div class="arrow">
+								<button class="arrow__item arrow__item_right news-right">
+									next
+								</button>
+							</div>
 						</div>
 					</div>
-					<div class="news-slider">
-					<% for(var i = 1; i < 6; i++){%>
-						<div class="col-lg-3">
-							<div class="news-slider__item">
-								<div class="news">
-									<div class="news__link">
-										<img src="./images/news<%=i %>.jpg" alt="" />
-										<div class="news__date">10.02.2017</div>
-										<div class="news__title">Жизненный цикл продукции</div>
+				</div>
+				<div class="news-slider row">
+				<% for(var i = 1; i < 6; i++){%>
+					<div class="col-lg-3">
+						<div class="news-slider__item">
+							<div class="news">
+								<div class="news__link">
+									<img src="./images/news<%=i %>.jpg" alt="" />
+									<div class="news__date">10.02 2017</div>
+									<div class="news__title">Жизненный цикл продукции
+										<%	if(i == 1){ %>, не учитывая количества слогов <% }	%>
 									</div>
-									<div class="news__txt">
-										Cтоящих между ударениями, представляет собой предел последовательности, такого мнения придерживаются многие депутаты Государственной Думы.
-									</div>
+								</div>
+								<div class="news__txt">
+									Cтоящих между ударениями, представляет собой предел последовательности, такого мнения придерживаются многие депутаты Государственной Думы.
 								</div>
 							</div>
 						</div>
-					<% } %>
 					</div>
+				<% } %>
 				</div>
 			</div>
 		</div>
@@ -317,7 +345,7 @@
 									</div>
 									<ul class="footer-nav__menu">
 										<%	item[key].forEach((item)=>{	%>
-											<li><%=item %></li>
+											<li><a href="c"><%=item %></a></li>
 										<%	});	%>
 									</ul>
 								</div>
@@ -325,13 +353,15 @@
 						<%	}
 					});	%>
 
-					<div class="co-md-4">
+					<div class="col-md-4">
 						<div class="footer-nav">
 							<div class="footer-nav__title">
 								Контакты
 							</div>
 							<div class="footer-nav__contacts">
-								Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+								<div class="footer-nav__addr">
+									Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+								</div>
 								<div class="footer-nav__phone">+7 (987) 654- 32-10</div>
 								<div class="footer-nav__phone">+7 (000) 000-00-00</div>
 								<a href="mailto:info@aaspekt.ru">info@aaspekt.ru</a>

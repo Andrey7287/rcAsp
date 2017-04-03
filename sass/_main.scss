@@ -16,16 +16,17 @@
 
 /* REASONS MOZAIK */
 .reason-outer {
-	padding: 15px 0;
+
 }
 .reason {
 	display: block;
 	margin-top: 35px;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 	text-align: center;
 	&__img {
 		position: relative;
 		padding-bottom: 90px;
+		margin-bottom: 10px;
 		&::after {
 			content: " ";
 			position: absolute;
@@ -38,9 +39,11 @@
 	}
 	&__title {
 		font-weight: 700;
+		line-height: 1.375;
 		font-family: $roboto;
 		color: #0c445e;
 		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 	&__txt {
 		@include font(14,22,$font: $roboto);
