@@ -1,5 +1,8 @@
 .footer {
 	color: #fff;
+	@include breakpoint(middle){
+		font-size: 0.95em;
+	}
 	&__top {
 		background: $bkg-footer;
 		padding: 28px 0;
@@ -11,18 +14,28 @@
 		@include font(14,20);
 	}
 	.infodisign {
-		display: block;
-		text-align: right;
+		float: right;
+		@include breakpoint(mobile){
+			float: none;
+		}
+		@include breakpoint(tablet) {
+			font-size: 0.8em;
+			.cut {
+				display: none;
+			}
+		}
 	}
 }
 
 .footer-nav {
 	line-height: 1.125;
+	clear: both;
+	margin-bottom: 22px;
 	&__title {
 		@include font(20,24,600);
 	}
 	&__menu {
-		margin: 18px 0;
+		margin-top: 18px;
 		li {
 			padding: 5px 0;
 			&:first-child {

@@ -1,6 +1,16 @@
 .site-nav{
 	display: flex;
-	margin-bottom: 21px;
+	margin-bottom: 30px;
+	@include breakpoint(middle){
+		flex-direction: column;
+		background: #4f699b;
+		padding: 15px 0;
+		display: none;
+		margin-bottom: 0;
+	}
+	@include breakpoint(mobile){
+		margin: 0 -15px;
+	}
 	&__item {
 		flex-grow: 1;
 		a {
@@ -10,6 +20,13 @@
 			display: inline-block;
 			position: relative;
 			transition: all 0.4s linear;
+			@include breakpoint(middle) {
+				color: #fff;
+				width: 100%;
+				line-height: 2;
+				text-decoration: underline;
+				padding-left: 15px;
+			}
 			&::after {
 				content: " ";
 				position: absolute;
@@ -19,9 +36,17 @@
 				height: 1px;
 				background: $menu;
 				transition: all 0.3s ease-in;
+				@include breakpoint(middle) {
+					display: none;
+				}
 			}
 			&:hover {
 				color: $red;
+				@include breakpoint(middle) {
+					background: #6b8fd3;
+					text-decoration: none;
+					color: #fff;
+				}
 				&::after {
 					height: 4px;
 					right: -4px;

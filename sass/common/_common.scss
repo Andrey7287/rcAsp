@@ -76,23 +76,31 @@ img {
 // Headers
 
 body h1, .h1 {
-	@include font(50, 54, 700);
+	@include font(36, 38, 700);
 	color: $header;
 	margin: 18px 0;
 	text-align: center;
 	@include breakpoint(mobile){
-		@include font(36, 38, 700);
+		@include font(28, 30, 700);
 	}
 }
 body h2, .h2 {
-	@include font(32, 36,700,$font: $roboto-c);
+	@include font(32,36,700,$font: $roboto-c);
 	text-transform: uppercase;
 	color: $header;
 	margin: 15px 0;
+	@include breakpoint(tablet){
+		@include font(28,32,700,$font: $roboto-c);
+	}
+	@include breakpoint(mobile){
+		@include font(24,28,700,$font: $roboto-c);
+	}
 	.low {
 		text-transform: none;
-		font-weight: 400;
 		display: block;
+		@include breakpoint(mobile){
+			@include font(18,14,$font: $roboto-c);
+		}
 	}
 }
 body h3, .h3 {

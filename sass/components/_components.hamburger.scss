@@ -22,18 +22,12 @@ $button-transistion-duration: 0.3s;     // The transition duration
 .c-hamburger {
 	display: none;
 	z-index: 100;
-	@include breakpoint (mobile) {
+	margin: 6px 0 0 0;
+	@include breakpoint (middle) {
 		display: block;
-		position: fixed;
-		top: 15px;
-		right: 15px;
-		.scroll &{
-			top: 3px;
-		}
 	}
 	position: relative;
 	overflow: hidden;
-	margin: 0;
 	padding: 0;
 	width: $button-width;
 	height: $button-height;
@@ -139,7 +133,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 /* active state, i.e. menu open */
 
 .c-hamburger--htx.is-active {
-	background-color: darken($c-humburger-color, 7.5%);
+	background-color: #4f699b;
 }
 
 .c-hamburger--htx.is-active span {

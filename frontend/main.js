@@ -51,19 +51,99 @@ if ( isMap ) {
 $('.partner-slider').slick({
 	prevArrow: $('.partner-left'),
 	nextArrow: $('.partner-right'),
-	slidesToShow: 6
+	slidesToShow: 6,
+	responsive: [{
+
+		breakpoint: 1200,
+		settings: {
+			slidesToShow: 5
+		}
+
+	},{
+
+		breakpoint: 992,
+		settings: {
+			slidesToShow: 4
+		}
+
+	},{
+
+		breakpoint: 640,
+		settings: {
+			slidesToShow: 3
+		}
+
+	},{
+
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 2
+		}
+
+	},{
+
+		breakpoint: 360,
+		settings: {
+			slidesToShow: 1
+		}
+
+	}]
 });
 
 $('.discont-slider').slick({
 	prevArrow: $('.discont-left'),
 	nextArrow: $('.discont-right'),
-	slidesToShow: 4
+	slidesToShow: 4,
+	responsive: [{
+
+		breakpoint: 992,
+		settings: {
+			slidesToShow: 3
+		}
+
+	},{
+
+		breakpoint: 768,
+		settings: {
+			slidesToShow: 2
+		}
+
+	},{
+
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 1
+		}
+
+	}]
 });
 
 $('.news-slider').slick({
 	prevArrow: $('.news-left'),
 	nextArrow: $('.news-right'),
-	slidesToShow: 4
+	slidesToShow: 4,
+	responsive: [{
+
+		breakpoint: 992,
+		settings: {
+			slidesToShow: 3
+		}
+
+	},{
+
+		breakpoint: 768,
+		settings: {
+			slidesToShow: 2
+		}
+
+	},{
+
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 1
+		}
+
+	}]
 });
 
 
@@ -111,10 +191,21 @@ $('a[href^="#"]').click(function(e){
 ***************************/
 
 if ( isAccordion ){
+	var timing,
+			slideAccordion = function (item, timing){
+				item.siblings().removeClass('accordion__item_act');
+				item.addClass('accordion__item_act');
+			};
 
 	$('.accordion').on('mouseover','.accordion__item',function(){
-		$(this).siblings().removeClass('accordion__item_act');
-		$(this).addClass('accordion__item_act');
+
+		var item = $(this);
+		clearInterval(timing);
+
+		timing = setTimeout(function(){
+			slideAccordion(item, timing);
+		}, 200)
+
 	});
 
 }
@@ -128,16 +219,13 @@ $('#topSearch').click(function(e){
 	e.preventDefault();
 
 	$(this).hide();
-
+	$(this).closest('.control-panel').addClass('collaps');
 	$(this).next().animate({
-		width: "190px",
+		width: "100%",
 		paddingLeft: "show",
 		paddingRight: "show",
 		marginLeft: "show",
 		marginRight: "show"
 	});
-
-
-
 
 });

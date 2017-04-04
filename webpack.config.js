@@ -6,7 +6,7 @@ const webpack = require('webpack'),
 	nodeEnv = process.env.NODE_ENV || 'development',
 	isProd = nodeEnv === 'production',
 	outputPath = 'js/',
-	pages = ['index', 'inner', 'contacts'];
+	pages = ['index', 'excluzive', 'contacts'];
 
 const extractCSS = new ExtractTextPlugin({
 	filename: '../style.css',
@@ -123,7 +123,7 @@ module.exports = {
 									options: {
 										sourceMap: true
 									}
-                },{
+								},{
 									loader: 'postcss-loader',
 									options: {
 										sourceMap: true
@@ -133,10 +133,10 @@ module.exports = {
 									options: {
 										sourceMap: true
 									}
-                }],
+								}],
 								fallback: 'style-loader'
 				})
-      }, {
+			}, {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',

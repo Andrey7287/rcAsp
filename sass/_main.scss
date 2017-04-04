@@ -2,6 +2,10 @@
 	padding: 15px 0 100px;
 	background: url(../images/bkg-mblock.jpg) 50% 50% no-repeat, linear-gradient(to right, #fff 20%,#3c4a73 20%,#3c4a73 80%,#fff 80%);
 	color: #fff;
+	@include breakpoint(tablet){
+		background: #6b8fd3;
+		padding: 15px 0 50px;
+	}
 	.h2, h2 {
 		color: #fff;
 		line-height: 1;
@@ -23,6 +27,9 @@
 	margin-top: 35px;
 	margin-bottom: 15px;
 	text-align: center;
+	@include breakpoint(tablet){
+		font-size: 0.9em;
+	}
 	&__img {
 		position: relative;
 		padding-bottom: 90px;
@@ -44,6 +51,15 @@
 		color: #0c445e;
 		text-transform: uppercase;
 		margin-bottom: 5px;
+		@include breakpoint(tablet) {
+			text-transform: none;
+		}
+		span {
+			display: block;
+			@include breakpoint(tablet) {
+				display: inline;
+			}
+		}
 	}
 	&__txt {
 		@include font(14,22,$font: $roboto);
@@ -65,6 +81,9 @@
 			background: #fff;
 			color: $header;
 			padding: 5px 0;
+			@include breakpoint(tablet) {
+				top: 25%;
+			}
 		}
 		.reason__title {
 			@include font(32,30,700,$font: $roboto-c);
@@ -148,8 +167,5 @@
 			}
 		}
 	}
-}
-.aqua-block {
-
 }
 

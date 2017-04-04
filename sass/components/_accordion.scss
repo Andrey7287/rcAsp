@@ -7,7 +7,7 @@
 
 	to {
 		visibility: hidden;
-		transform: translateY(100%);
+		transform: translateY(calc(100% - 60px));
 		padding: 0 7px 0;
 		font-size: 0;
 	}
@@ -35,10 +35,20 @@
 	overflow: hidden;
 	border-bottom: 3px solid #081420;
 	border-right: 3px solid #081420;
+	@include breakpoint(middle){
+		flex-direction: column;
+		height: auto;
+		max-width: 590px;
+	}
 	&__item {
 		border-left: 3px solid #081420;
 		transition: all .4s ease-in;
 		width: 12%;
+		@include breakpoint(middle) {
+			width: 100%;
+			overflow: hidden;
+			border-left: 0;
+		}
 		@for $i from 1 through 6 {
 			&:nth-child(#{$i}){
 				background: url(../images/accordion#{$i}.jpg) 50% 50% no-repeat;
@@ -63,10 +73,31 @@
 				visibility: visible;
 				position: absolute;
 				bottom: calc(100% + 90px);
+				@include breakpoint(middle) {
+					position: static;
+					padding: 15px 0;
+				}
+			}
+			&__list {
+				margin: 0;
+				line-height: 0;
+				transition: all .4s ease-in;
+			}
+			&__btn {
+				line-height: 0;
+				transition: all .2s ease-in;
+				.btn {
+					padding: 0;
+					border-width: 0;
+					transition: all .2s ease-in;
+				}
 			}
 		}
 		&_act {
 			width: 40%;
+			@include breakpoint(middle) {
+				width: 100%;
+			}
 			.service__content {
 				animation: slideInUp .4s linear forwards;
 			}
@@ -74,9 +105,18 @@
 				bottom: 100%;
 				@include font(30,34);
 			}
-		}
-		&:first-child {
-			border-left: 3px solid #081420;
+			.service__btn {
+				line-height: 0;
+				.btn {
+					padding: 15px!important;
+					border-width: 3px!important;
+					line-height: 1.875;
+				}
+			}
+			.service__list{
+				margin: 0.5em 0;
+				line-height: 1.875;
+			}
 		}
 	}
 }

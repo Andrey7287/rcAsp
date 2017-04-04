@@ -7,18 +7,37 @@
 	@include clearfix;
 	display: flex;
 	margin: 18px 0;
+	@include breakpoint(mobile) {
+		flex-direction: column;
+	}
 	&__item {
 		display: inline-flex;
 		&:first-child {
 			flex:1;
+			@include breakpoint(mobile){
+				flex-direction: column;
+			}
+			h2, .h2 {
+				@include breakpoint(tablet){
+					flex-basis: 80%;
+				}
+			}
 		}
 	}
 	&__btn {
 		display: flex;
 		align-items: center;
+		@include breakpoint(mobile) {
+			margin-bottom: 15px;
+		}
 		.btn {
 			padding: 16px 18px;
 			margin-left: 40px;
+			@include breakpoint(tablet){
+				margin-left: 0;
+				margin-right: 30px;
+				padding: 12px;
+			}
 		}
 	}
 	&__arrows {
@@ -105,16 +124,38 @@
 		margin-bottom: 7px;
 		img {
 			margin-bottom: 15px;
+			transition: all 0.3s ease-in;
+		}
+		&:hover {
+			.news__title{
+				color: $red;
+			}
+			img {
+				opacity: 0.9;
+			}
 		}
 	}
 	&__date {
 		width: 26%;
 		@include font(20,24,700,$font: $roboto);
 		color: #6b8fd3;
+		@include breakpoint(middle){
+			@include font(18,20,700,$font: $roboto);
+		}
+		@include breakpoint(mobile){
+			flex-basis: 100%;
+			margin-bottom: 15px;
+		}
 	}
 	&__title {
 		width: 74%;
+		color: $header;
+		transition: all 0.3s ease-in;
 		@include font(16,24,700,$font: $roboto);
+		@include breakpoint(middle) {
+			line-height: 1.25em;
+			margin-top: -2px;
+		}
 	}
 	&__txt {
 		@include font(14,20,$font: $roboto);

@@ -7,82 +7,109 @@
 	&__inner {
 		display: flex;
 		align-items: center;
+		@include breakpoint(mobile){
+			flex-direction: column;
+			align-items: stretch;
+		}
 	}
 	&__item {
 		color: #fff;
 		font-family: $roboto;
 		&:first-child {
 			line-height: 1.4;
+			flex-basis: 65%;
 			@include breakpoint(middle){
-				flex-basis: 50%;
+				flex-basis: 59%;
+			}
+			@include breakpoint(small) {
+				font-size: 0.9em;
 			}
 		}
 		&:last-child {
 			flex-grow: 1;
 			padding-left: 15px;
+			@include breakpoint(mobile) {
+				padding-left: 0;
+			}
 		}
 	}
-	.control-panel {
-		display: flex;
-		margin-right: -20px;
-		@include breakpoint(tablet) {
-			justify-content: flex-end;
+}
+
+/* CONTROL-PANEL */
+
+.control-panel {
+	display: flex;
+	margin-right: -20px;
+	@include breakpoint(middle){
+		margin-right: 0;
+		font-size: 0.9em;
+	}
+	@include breakpoint(tablet) {
+		justify-content: flex-end;
+	}
+	&__item {
+		flex-grow: 1;
+		text-align: right;
+		@include breakpoint(tablet){
+			flex-grow: unset;
 		}
-		&__item {
-			flex-grow: 1;
-			text-align: right;
-			@include breakpoint(tablet){
-				flex-grow: unset;
-			}
-			&:first-child {
-				width: 44%;
-				.control-panel__link {
-					display: inline-block;
-					&::before {
-						top: 13px;
-						left: 8px;
-					}
-				}
-			}
+		.collaps &:first-child { // search open
+			flex-grow: 50;
 		}
-		&__link {
-			flex-grow: 1;
-			display: block;
-			padding: 6px 20px 6px 35px;
-			color: #fff;
-			position: relative;
-			transition: background 0.2s ease-in;
-			@include breakpoint(tablet){
-				display: inline-block;
-				font-size: 0;
-			}
-			&::before {
-				content: " ";
+		&:last-child { //mobile menu toghle
+			display: none;
+			@include breakpoint(middle){
 				display: block;
-				position: absolute;
-				left: 15px;
-				top: 11px;
 			}
-			&_search {
-				&::before {
-					@include sprite($ico-search);
-				}
+		}
+	}
+	&__link {
+		flex-grow: 1;
+		display: block;
+		padding: 6px 20px 6px 35px;
+		color: #fff;
+		position: relative;
+		transition: background 0.2s ease-in;
+		.collaps & {
+			display: inline-block;
+			font-size: 0;
+		}
+		@include breakpoint(tablet){
+			display: inline-block;
+			font-size: 0;
+		}
+		&::before {
+			content: " ";
+			display: block;
+			position: absolute;
+			left: 15px;
+			top: 12px;
+			@include breakpoint(tablet){
+				left: 20px;
 			}
-			&_login {
-				&::before {
-					@include sprite($ico-key);
-				}
+		}
+		.collaps &::before{
+			left: 20px;
+		}
+		&_search {
+			&::before {
+				@include sprite($ico-search);
 			}
-			&_reg {
-				&::before {
-					@include sprite($ico-lock);
-				}
+		}
+		&_login {
+			&::before {
+				@include sprite($ico-key);
 			}
-			&:hover,
-			&:active,
-			&:focus {
-				background: #4f699b;
+		}
+		&_reg {
+			&::before {
+				@include sprite($ico-lock);
 			}
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			background: #4f699b;
 		}
 	}
 }
@@ -95,6 +122,9 @@
 	display: none;
 	margin: 6px 0;
 	width: 0px;
+	@include breakpoint(small) {
+		font-size: 0.9em;
+	}
 	&__input {
 		padding: 0 30px 0 10px;
 		background: #fff;
@@ -115,13 +145,15 @@
 /*INNER*/
 .site-logo {
 	width: 165px;
-	height: 124px;
 	.cls-1{
 		fill:#124c8e;
 		transition: fill 0.3s ease-in;
 	}
 	.cls-2{
 		fill:#373a3b;
+	}
+	@include breakpoint(mobile){
+		width: 130px;
 	}
 	&:hover {
 		.cls-1 {
@@ -131,12 +163,48 @@
 }
 .header-inner {
 	display: flex;
-	padding: 15px 0;
+	padding: 15px 0 7px;
 	align-items: flex-end;
+	@include breakpoint(middle){
+		flex-wrap: wrap;
+	}
+	&__item {
+		@include breakpoint(middle) {
+			order: 2;
+		}
+		&:first-child {
+			@include breakpoint(middle) {
+				flex-grow: 1;
+			}
+		}
+		&:last-child {
+			margin: 0 0 10px 15px;
+			@include breakpoint(mobile){
+				font-size: 0.9em;
+				margin: 0 0 10px 10px;
+			}
+			@include breakpoint(small){
+				margin: 0 0 10px 0;
+			}
+		}
+		&_nav {
+			flex-grow: 1;
+			margin: 0 15px;
+			@include breakpoint(middle) {
+				order: 1;
+				margin: 0;
+				width: 100%;
+				position: relative;
+				top: -15px;
+			}
+		}
+	}
 	&__logo {
 		line-height: 0;
-		display: block;
 		margin-right: 15px;
+		@include breakpoint(mobile) {
+			margin-right: 10px;
+		}
 	}
 	&__img {
 		display: block;
@@ -151,16 +219,13 @@
 			}
 		}
 	}
-	.site-nav-panel {
-		flex-grow: 1;
-		margin: 0 15px;
+	&__phone {
+		@include font(20,30,$font: $roboto);
+		color: #4e483c;
 	}
-	&__item {
-		&:last-child {
-			margin: 0 0 10px 15px;
-		}
+	.btn {
+		margin-top: 6px;
+		width: 100%;
 	}
 }
-
-
 
