@@ -240,3 +240,23 @@ $('#topSearch').click(function(e){
 	});
 
 });
+
+/****************************
+******** Custom input *******
+*****************************/
+
+var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false,
+		inputFile = document.getElementById('inputFile'),
+		inputText = document.getElementById('inputText');
+
+inputFile.onchange = function(){
+
+		var file_name = inputFile.files[ 0 ].name;
+
+		if( !file_name.length ) {
+			return;
+		}
+
+		file_api ?	(document.forms.regForm.classList.add('legacy')) : (document.forms.regForm.classList.add('legacy'));
+
+}

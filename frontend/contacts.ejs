@@ -109,28 +109,33 @@
 		<%	var formItems = ['Название комании','Вид деятельности<sup>*</sup>','Местоположение<sup>*</sup>','Web-сайт','ФИО<sup>*</sup>','Должность','E-mail<sup>*</sup>','Контактный телефон<sup>*</sup>',]	%>
 
 		<div class="container">
-			<form action="">
+			<form action="" name="regForm">
 				<div class="reg-form">
 					<div class="reg-form__section">
 						<%	formItems.forEach((key, idx)=>{	%>
 							<div class="reg-form__item">
 								<label><%=key %></label>
-								<input type="<% if (idx == 6){ %>email<% }
+								<input name="" type="<% if (idx == 6){ %>email<% }
 															 else if (idx == 7) { %>tel<% }
 															 else { %>text<% } %>"  id="company"/>
 							</div>
 						<%	}) %>
 					</div>
 					<div class="reg-form__section">
-						<div class="reg-form__item"></div>
-						<div class="reg-form__item"></div>
+						<div class="reg-form__item">
+							<label>Дополнительная информация</label>
+							<textarea name=""></textarea>
+						</div>
+						<div class="reg-form__item">
+							<div class="file">
+								<label>Приложенные файлы<sup>*</sup></label>
+								<label class="file__item">
+									<input name="" type="file" id="inputFile">
+									<span id="inputText">Перетащите файлы<br />или кликните сюда для обзора</span>
+								</label>
+							</div>
+						</div>
 					</div>
-
-					<input type="text" placeholder="Ваше имя" />
-					<input type="tel" placeholder="Телефон" />
-					<input type="email" placeholder="E-mail" />
-					<textarea name="" placeholder="Комментарий к заказу"></textarea>
-
 				</div>
 				<div class="show-all show-all_big">
 					<button type="submit" class="btn btn_r">оформить заказ</button>
