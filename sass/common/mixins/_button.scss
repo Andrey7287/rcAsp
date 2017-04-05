@@ -1,5 +1,5 @@
 @mixin button($size: 14, $color: $red, $color2: #fff, $invert: false) {
-	@include font($size, $size, 700, $base-font-size, $roboto);
+	@include font($size, $size, 700, $font: $roboto-c);
 	padding: ($size - 4)+px;
 	background: transparent;
 	color: $color;

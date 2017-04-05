@@ -14,7 +14,6 @@
 	}
 	&__item {
 		color: #fff;
-		font-family: $roboto;
 		&:first-child {
 			line-height: 1.4;
 			flex-basis: 65%;
@@ -220,7 +219,7 @@
 		}
 	}
 	&__phone {
-		@include font(20,30,$font: $roboto);
+		@include font(20,30);
 		color: #4e483c;
 	}
 	.btn {

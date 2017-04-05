@@ -39,6 +39,8 @@
 		flex-direction: column;
 		height: auto;
 		max-width: 590px;
+		border-top: 3px solid #081420;
+		border-right: 0;
 	}
 	&__item {
 		border-left: 3px solid #081420;
@@ -72,7 +74,7 @@
 				@include fluidFontSize(18,22,1200,1400);
 				visibility: visible;
 				position: absolute;
-				bottom: calc(100% + 90px);
+				bottom: calc(100% + 30px);
 				@include breakpoint(middle) {
 					position: static;
 					padding: 15px 0;
@@ -108,7 +110,7 @@
 			.service__btn {
 				line-height: 0;
 				.btn {
-					padding: 15px!important;
+					padding: 5px 15px!important;
 					border-width: 3px!important;
 					line-height: 1.875;
 				}

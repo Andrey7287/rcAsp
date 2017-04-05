@@ -1,9 +1,41 @@
-$placeholder-color: $default-color;
-
-
-::placeholder {
-	color: $placeholder-color; /* standart */
+.discount-form {
+	background: #153b83;
+	padding: 55px 0;
+	::placeholder {
+		color: #6b8fd3;
+	}
+	&__title {
+		@include font(46,48,700,$font: $roboto-c);
+		margin: 24px 0;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+	}
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		input,
+		textarea {
+			background: #01266e;
+			color: #6b8fd3;;
+			@include font(17,28,300);
+			padding: 6px 10px;
+			border: 0;
+			flex-basis: 31.66666%;
+			margin: 0 0 20px 2.5%;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		textarea {
+			flex-basis: 100%;
+			resize: none;
+			margin: 0 0 28px 0;
+			height: 100px;
+		}
+	}
 }
+
 
 
 input {

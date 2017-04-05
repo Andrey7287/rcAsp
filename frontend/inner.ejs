@@ -66,11 +66,11 @@
 							<ul class="site-nav">
 								<%	menuItems.forEach((item, idx)=>{
 									for (key in item) { %>
-										<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
-											<a href="<%=item[key] %>">
-												<%=key %>
-											</a>
-										</li>
+									<li class="site-nav__item<% if(!idx){ %> site-nav__item--act<%}%>">
+										<a href="<%=item[key] %>">
+											<%=key %>
+										</a>
+									</li>
 									<%	}
 									});	%>
 							</ul>
@@ -93,208 +93,82 @@
 	<!-- HEADER end-->
 
 	<div class="content">
-		<!-- Accordion data -->
-		<%	var accordion = ['Услуги по созданию','Услуги по развитию','Услуги по оптимизации','Аудиторско-консалтинговые услуги','Торговая площадка','Заголовок подраздела при наведении'],
-				list =	['Услуга или еще что-то','Подраздел заголовок из списка','Заголовок из списка','Подраздел из списка','Подраздел заголовок']
 
-		%>
-
-		<!-- Accordion tpl -->
-		<div class="accordion-outer">
-			<div class="accordion">
-				<%	accordion.forEach((item, idx)=>{ %>
-					<div class="accordion__item <% if(!idx){ %>accordion__item_act<%}%>">
-						<div class="service">
-							<div class="service__inner">
-								<div class="service__content">
-									<div class="service__title">
-										<%=item %>
-									</div>
-									<ul class="service__list">
-										<%	for (l = 0; l < idx; l++){	%>
-											<li><%=list[l] %></li>
-										<%	} %>
-									</ul>
-									<div class="service__btn">
-										<button class="btn btn_w">подробнее</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<%	});	%>
-			</div>
-		</div>
-
-		<div class="about-block" id="about">
+		<!-- Top img block -->
+		<div class="top-img top-img_exc">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<h2><span class="upercase">Об&nbsp;Агентстве</span><br />стратегического<br />развития бизнеса </h2>
-						<p>Социальный статус разрушаем. Быличка существенно искажает критерий сходимости Коши. Мифопорождающее текстовое устройство начинает экспериментальный поток сознания, и это ясно видно в следующем отрывке.</p>
-						<p>Математический анализ иллюстрирует невероятный возврат к стереотипам. Особую ценность, на наш взгляд, представляет бином Ньютона однородно изменяет верлибр.</p>
-						<button class="btn btn_w">Узнать больше</button>
-					</div>
+				<div class="top-img__inner">
+					<div class="top-img__title">Эксклюзивные предложения</div>
+					<p>Предложения от наших партнеров поразят вас своей <br />выгодностью и крутотой. Здесь несколько строчек про то, <br />что это такое и почему это так классно.</p>
 				</div>
 			</div>
 		</div>
 
+		<!-- EXCLUZIVE INNER PAGE (START) -->
 		<div class="container">
-			<div class="reason-outer">
-				<div class="row">
-					<!-- Reason data -->
-					<%
-						var reasons = [
-							{'причин': 'работать с нами'},
-							{'№1 на рынке': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно.'},
-							{'Комплексные решения': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
-							{'Индивидуальный подход': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. '},
-							{'<span>Наши клиенты —</span> наши партнеры': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-							{'100% гарантия результата': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-							{'Консультации 7/365': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-							{'<span>Высокие</span> стандарты качества': 'Парадигма, иcходя из того, что параллельна. Комбинаторное приращение случайно. ' },
-						]
-					%>
-					<!-- Reason template -->
-
-					<%	reasons.forEach((item, idx)=>{
-						for (key in item) { %>
-							<a href="" class="reason col-sm-3">
-								<div class="reason__img">
-									<%	if(!idx) {	%><img src="../images/causes1.png" alt="" />	<%	}	%>
-								</div>
-								<div class="text-outer">
-									<div class="reason__title"><%=key %></div>
-									<div class="reason__txt"><%=item[key] %></div>
-								</div>
-							</a>
-						<%	}
-					});	%>
+			<h1>название предлагаемой услуги, например, отмывание грязных чапельников</h1>
+			<div class="exc-inner">
+				<div class="exc-inner__header">
+					<div class="exc-inner__img">
+						<img src="../images/exc-inner.jpg" alt="">
+					</div>
+					<div class="exc-inner__desc">
+						<div class="discount">
+							<div class="discount__item">
+								<div class="discount__val">скидка 60%</div>
+							</div>
+							<div class="discount__item">
+								<div class="discount__note">при заказе на&nbsp;сайте</div>
+							</div>
+						</div>
+						<span>
+						Краткое, привлекательное описание услуги. По их почти единодушному мнению, психе дает культурный эскапизм, так, например, Ричард Бендлер для построения эффективных состояний использовал изменение субмодальностей. Большую роль в популяризации психодрамы сыграл институт.
+					</span>
+					</div>
+				</div>
+				<div class="exc-inner__main">
+					<p>Подробное описание услуги. Креатив, согласно Ф.Котлеру, разрушаем. Гиперцитата представляет собой вязкий субъект. Потребление вертикально отражает интеграл от функции, обращающейся в бесконечность вдоль линии. Вектор ускоряет филосовский райдер, потому что сюжет и фабула различаются.</p>
+					<h4>Подзаголовок</h4>
+					<p>Скачок функции решительно иллюстрирует конформизм. Коллективное бессознательное аннигилирует зеркальный взаимозачет. Если рассмотреть все принятые в последнее время нормативные акты, то видно, что эстетическое воздействие интегрирует изоморфный бихевиоризм. Матрица возможна. Техника последовательно трансформирует эмпирический код. Регрессное требование, на первый взгляд, перемещает музыкальный композиционный анализ.</p>
+					<h4>Подзаголовок</h4>
+					<p>Скачок функции решительно иллюстрирует конформизм. Коллективное бессознательное аннигилирует зеркальный взаимозачет. Если рассмотреть все принятые в последнее время нормативные акты, то видно, что эстетическое воздействие интегрирует изоморфный бихевиоризм. Матрица возможна. Техника последовательно трансформирует эмпирический код. Регрессное требование, на первый взгляд, перемещает музыкальный композиционный анализ.</p>
+				</div>
+				<div class="exc-inner__footer">
+					<div class="exc-inner__logo">
+						<img src="../images/slider-logo.jpg" alt="">
+					</div>
+					<h3>название компании</h3>
+					<p>Скачок функции решительно иллюстрирует конформизм. Коллективное бессознательное аннигилирует зеркальный взаимозачет. Если рассмотреть все принятые в последнее время нормативные акты, то видно, что эстетическое воздействие интегрирует изоморфный бихевиоризм. Матрица возможна. Техника последовательно трансформирует эмпирический код. Регрессное требование, на первый взгляд, перемещает музыкальный композиционный анализ.</p>
+					<h4>Подзаголовок</h4>
+					<p>В связи с этим нужно подчеркнуть, что тоника ненаблюдаемо использует такыровидный филогенез. Страховой полис, конечно, осознаёт сушильный шкаф. Акцент, как справедливо считает И.Гальперин, традиционно просветляет отрицательный интеграл Гамильтона, хотя это довольно часто напоминает песни Джима Моррисона и Патти Смит. Психосоматика дает бурозём.</p>
 				</div>
 			</div>
 		</div>
+		<!-- EXCLUZIVE INNER PAGE (END) -->
 
-		<!-- SLIDERS -->
-		<!-- SLIDER1 -->
-		<div class="aqua-block">
+		<!-- FORM -->
+		<div class="discount-form">
 			<div class="container">
-				<div class="slider-head">
-					<div class="slider-head__item"><h2>с нами уже работают</h2></div>
-					<div class="slider-head__item">
-						<div class="slider-head__arrows">
-							<div class="arrow">
-								<button class="arrow__item arrow__item_left partner-left">
-									previous
-								</button>
-							</div>
-							<div class="arrow">
-								<button class="arrow__item arrow__item_right partner-right">
-									next
-								</button>
-							</div>
-						</div>
-					</div>
+				<div class="discount-form__title">
+					заказать услугу со скидкой 60%
 				</div>
-				<div class="partner-slider row">
-				<% for(var i = 0; i < 9; i++){%>
-					<div class="col-lg-2">
-						<a href="" class="partner-slider__item">
-							<img src="./images/partner-thumb.jpg" alt="" />
-						</a>
+				<form action="">
+					<div class="discount-form__form">
+						<input type="text" placeholder="Ваше имя" />
+						<input type="tel" placeholder="Телефон" />
+						<input type="email" placeholder="E-mail" />
+						<textarea name="" placeholder="Комментарий к заказу"></textarea>
 					</div>
-				<% } %>
-				</div>
-			</div>
-		</div>
-		<!-- SLIDER2 -->
-		<div class="aqua-block">
-			<div class="container">
-				<div class="slider-head">
-					<div class="slider-head__item">
-
-							<h2>Эксклюзивные предложения<span class="low">на услуги наших партнеров</span></h2>
-							<div class="slider-head__btn">
-								<button class="btn btn_r">Все предложения партнеров</button>
-							</div>
-
+					<div class="show-all show-all_big">
+						<button type="submit" class="btn btn_ri">оформить заказ</button>
 					</div>
-					<div class="slider-head__item">
-						<div class="slider-head__arrows">
-							<div class="arrow">
-								<button class="arrow__item arrow__item_left discont-left">
-									previous
-								</button>
-							</div>
-							<div class="arrow">
-								<button class="arrow__item arrow__item_right discont-right">
-									next
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="discount-slider discount row">
-				<% for(var i = 0; i < 9; i++){%>
-					<div class="col-lg-3">
-						<a href="we" class="discount__item">
-							<div class="discount__logo">
-								<img src="./images/slider-logo.jpg" alt="" />
-							</div>
-							<div class="discount__company"><span>название компании</span></div>
-							<div class="discount__scope"><span>Сфера деятельности компании</span></div>
-							<div class="discount__prof"><span>Категория услуг, например, отмывание чапельников</span></div>
-							<div class="discount__val"><span>-60%</span></div>
-						</a>
-					</div>
-				<% } %>
-				</div>
-			</div>
-		</div>
-		<!-- SLIDER3 (NEWS)-->
-		<div class="news-block">
-			<div class="container">
-				<div class="slider-head">
-					<div class="slider-head__item"><h2>новости</h2></div>
-					<div class="slider-head__item">
-						<div class="slider-head__arrows">
-							<div class="arrow">
-								<button class="arrow__item arrow__item_left news-left">
-									previous
-								</button>
-							</div>
-							<div class="arrow">
-								<button class="arrow__item arrow__item_right news-right">
-									next
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="news-slider row">
-				<% for(var i = 1; i < 6; i++){%>
-					<div class="col-lg-3">
-						<div class="news-slider__item">
-							<div class="news">
-								<a href="hz" class="news__link">
-									<img src="./images/news<%=i %>.jpg" alt="" />
-									<div class="news__date">10.02 2017</div>
-									<div class="news__title">Жизненный цикл продукции
-										<%	if(i == 1){ %>, не учитывая количества слогов <% }	%>
-									</div>
-								</a>
-								<div class="news__txt">
-									Cтоящих между ударениями, представляет собой предел последовательности, такого мнения придерживаются многие депутаты Государственной Думы.
-								</div>
-							</div>
-						</div>
-					</div>
-				<% } %>
-				</div>
+				</form>
 			</div>
 		</div>
 
 	</div>
 
+	<!-- FOOTER -->
 	<footer class="footer">
 		<div class="footer__top">
 			<div class="container">
@@ -339,7 +213,7 @@
 						]
 					%>
 
-					<%	footerNav.forEach((item, idx)=>{
+						<%	footerNav.forEach((item, idx)=>{
 							for (key in item) { %>
 							<div class="col-md-2 col-sm-6">
 								<div class="footer-nav">
@@ -348,30 +222,34 @@
 									</div>
 									<ul class="footer-nav__menu">
 										<%	item[key].forEach((item)=>{	%>
-											<li><a href="c"><%=item %></a></li>
-										<%	});	%>
+											<li>
+												<a href="c">
+													<%=item %>
+												</a>
+											</li>
+											<%	});	%>
 									</ul>
 								</div>
 							</div>
-						<%	}
+							<%	}
 					});	%>
 
-					<div class="col-md-4 col-sm-12">
-						<div class="footer-nav">
-							<div class="footer-nav__title">
-								Контакты
-							</div>
-							<div class="footer-nav__contacts">
-								<div class="footer-nav__addr">
-									Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+								<div class="col-md-4 col-sm-12">
+									<div class="footer-nav">
+										<div class="footer-nav__title">
+											Контакты
+										</div>
+										<div class="footer-nav__contacts">
+											<div class="footer-nav__addr">
+												Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+											</div>
+											<div class="footer-nav__phone">+7 (987) 654- 32-10</div>
+											<div class="footer-nav__phone">+7 (000) 000-00-00</div>
+											<a href="mailto:info@aaspekt.ru">info@aaspekt.ru</a>
+										</div>
+										<button class="btn btn_ri">связаться с нами</button>
+									</div>
 								</div>
-								<div class="footer-nav__phone">+7 (987) 654- 32-10</div>
-								<div class="footer-nav__phone">+7 (000) 000-00-00</div>
-								<a href="mailto:info@aaspekt.ru">info@aaspekt.ru</a>
-							</div>
-							<button class="btn btn_ri">связаться с нами</button>
-						</div>
-					</div>
 
 				</div>
 			</div>

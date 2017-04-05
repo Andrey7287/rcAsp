@@ -6,7 +6,7 @@ const webpack = require('webpack'),
 	nodeEnv = process.env.NODE_ENV || 'development',
 	isProd = nodeEnv === 'production',
 	outputPath = 'js/',
-	pages = ['index', 'excluzive', 'contacts'];
+	pages = ['index', 'excluzive', 'inner', 'contacts'];
 
 const extractCSS = new ExtractTextPlugin({
 	filename: '../style.css',

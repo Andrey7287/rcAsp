@@ -76,12 +76,12 @@ img {
 // Headers
 
 body h1, .h1 {
-	@include font(36, 38, 700);
+	@include font(36, 42, 700, $font: $roboto-c);
 	color: $header;
-	margin: 18px 0;
-	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 0;
 	@include breakpoint(mobile){
-		@include font(28, 30, 700);
+		@include font(28,32,700,$font: $roboto-c);
 	}
 }
 body h2, .h2 {
@@ -104,20 +104,20 @@ body h2, .h2 {
 	}
 }
 body h3, .h3 {
-	@include font(20, 24, 700);
+	@include font(20, 24, 700,$font: $roboto-c);
 	color: $header;
 	margin: 10px 0;
+	text-transform: uppercase;
 }
-body h4, .h4, body h5, .h5 {
-	color: $header;
-}
-
-.inner {
-	h1, .h1, h2, .h2, h3, .h3 {
-		text-align: left;
-	}
+body h4, .h4 {
+	text-transform: uppercase;
+	font-weight: 500;
+	margin: 4px 0;
 }
 
+p {
+	margin: 4px 0;
+}
 
 //Lists
 

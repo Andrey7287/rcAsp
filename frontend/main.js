@@ -90,7 +90,7 @@ $('.partner-slider').slick({
 	}]
 });
 
-$('.discont-slider').slick({
+$('.discount-slider').slick({
 	prevArrow: $('.discont-left'),
 	nextArrow: $('.discont-right'),
 	slidesToShow: 4,
@@ -174,15 +174,26 @@ $('.scrollup').scrollUp();
 ****** Smooth scroll ******
 ***************************/
 
-$('a[href^="#"]').click(function(e){
+$('a[href*="#"]').click(function(e){
 
 	e.preventDefault();
 
-	var target = $(this).attr('href'),
-			//headerHeight = $('header').outerHeight(),
-			scrollTo = $(''+target).offset().top;
+	var href = $(this).attr('href'),
+			selector = href.slice(href.indexOf('#')),
+			$target = $(`${selector}`);
 
-	$('html, body').animate({scrollTop: scrollTo}, 800);
+			if ( $('#about').is('#about') ) {
+
+				$('html, body').animate({
+					scrollTop: $target.offset().top
+				}, 800);
+
+
+			} else {
+
+				window.location = href;
+
+			}
 
 });
 

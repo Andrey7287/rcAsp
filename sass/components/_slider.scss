@@ -79,37 +79,6 @@
 		}
 	}
 }
-
-.discont-slider {
-	&__item{
-		text-align: center;
-		background: #fff;
-		padding: 15px 10px;
-		margin-bottom: 30px;
-		text-transform: uppercase;
-		color: $header;
-		img {
-			display: inline-block;
-		}
-	}
-	&__company {
-		@include font(18,22,$font: $roboto-c);
-		margin: 5px 0;
-	}
-	&__scope {
-		@include font(16,20,$font: $roboto-c);
-		color: #777;
-		text-transform: none;
-	}
-	&__prof {
-		@include font(20,24,700,$font: $roboto-c);
-		margin: 25px 0 7px;
-	}
-	&__val {
-		@include font(60,60,700,$font: $roboto-c);
-		color: $red;
-	}
-}
 .news-block {
 	padding: 65px 0;
 	h2, .h2 {
@@ -137,10 +106,10 @@
 	}
 	&__date {
 		width: 26%;
-		@include font(20,24,700,$font: $roboto);
+		@include font(20,24,700);
 		color: #6b8fd3;
 		@include breakpoint(middle){
-			@include font(18,20,700,$font: $roboto);
+			@include font(18,20,700);
 		}
 		@include breakpoint(mobile){
 			flex-basis: 100%;
@@ -151,14 +120,14 @@
 		width: 74%;
 		color: $header;
 		transition: all 0.3s ease-in;
-		@include font(16,24,700,$font: $roboto);
+		@include font(16,24,700);
 		@include breakpoint(middle) {
 			line-height: 1.25em;
 			margin-top: -2px;
 		}
 	}
 	&__txt {
-		@include font(14,20,$font: $roboto);
+		@include font(14,20);
 		color: $grey;
 	}
 }

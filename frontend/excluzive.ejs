@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
 </head>
 
@@ -55,8 +55,8 @@
 						<!-- Site menu data -->
 						<%
 								var menuItems = [
-									{'О&nbsp;компании': './about'},
-									{'Услуги': './service.html'},
+									{'О&nbsp;компании': './#about'},
+									{'Услуги': './excluzive.html'},
 									{'Сотрудничество': './inner.html'},
 									{'Карьера': './inner2.html'},
 									{'Пресс-центр': './inner3.html' },
@@ -95,7 +95,43 @@
 
 	<div class="content">
 
+		<!-- Top img block -->
+	<div class="top-img top-img_exc">
+		<div class="container">
+			<div class="top-img__inner">
+				<div class="top-img__title">Эксклюзивные предложения</div>
+				<p>Предложения от наших партнеров поразят вас своей <br />выгодностью и крутотой. Здесь несколько строчек про то, <br />что это такое и почему это так классно.</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="container">
+		<div class="excluzive">
+			<div class="discount">
+				<%	for(var j = 0; j < 10; j++){%>
+					<a href="we" class="discount__item">
+						<div class="discount__block">
+							<div class="discount__img">
+								<img src="./images/exc-img.jpg" alt="">
+							</div>
+						</div>
+						<div class="discount__block">
+							<div class="discount__logo">
+								<img src="./images/slider-logo.jpg" alt="" />
+							</div>
+							<div class="discount__company"><span>название компании</span></div>
+							<div class="discount__scope"><span>Сфера деятельности компании</span></div>
+							<div class="discount__prof"><span>Категория услуг, например, отмывание чапельников</span></div>
+							<div class="discount__val"><span>-60%</span></div>
+						</div>
+					</a>
+				<%	}	%>
+			</div>
+			<div class="show-all">
+				<button class="btn btn_r">показать еще предложения</button>
+			</div>
+		</div>
+	</div>
 
 	</div>
 
