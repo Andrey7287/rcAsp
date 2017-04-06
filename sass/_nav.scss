@@ -65,7 +65,7 @@
 	position: fixed;
 	top: 250px;
 	left: 0;
-	transition: top .4s ease-out;
+	transition: all.4s ease-in;
 	.toggle {
 		@include font(0,0);
 		border: 0;
@@ -114,8 +114,9 @@
 .sticky-menu {
 	margin: 0;
 	padding: 0;
-	width: 0;
+	width: 0px;
 	font-size: 0em;
+	transition: all .4s ease-out;
 	.open & {
 		font-size: 1em;
 		width: 265px;
