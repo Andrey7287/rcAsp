@@ -262,4 +262,22 @@ if ( inputFile ) {
 
 	}
 }
+/*****************************
+********* Sticky menu ********
+******************************/
 
+$('.sticky-menu').on('click', '.sticky-menu__link', expandMenu);
+
+function expandMenu(e) {
+	e.preventDefault();
+
+	$(this).parent().toggleClass('act').siblings().removeClass('act').find('ul').slideUp();
+	$(this).next().stop().slideToggle();
+
+
+}
+
+$('#toggleStickyMenu').click(function(e){
+	e.preventDefault();
+	$(this).parent().toggleClass('open');
+});
