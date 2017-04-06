@@ -95,57 +95,75 @@
 	<div class="content">
 
 		<!-- Top img block -->
-		<div class="top-img top-img_reg">
+		<div class="top-img top-img_service">
 			<div class="container">
 				<div class="top-img__inner">
-					<div class="top-img__title">Регистрация</div>
-					<p>Заполните поля ниже и отправьте заявку на регистрацию. <br />После проверки информации Вам будет направлено уведомление на электронную почту с резолюцией о прохождении регистрации. В случае положительного решения письмо будет содержать логин и пароль для входа.</p>
+					<div class="top-img__title">Услуги<br />по созданию</div>
+					<p>Маркетингово-ориентированное издание тривиально. <br />Сумма ряда, в соответствии с основным законом динамики,<br /> привлекает равновероятный фирменный стиль. <br />Приступая к доказательству следует безапелляционно <br />заявить, что подмножество подсознательно влияет <br />на составляющие гироскопического момента больше, <br />чем конструктивный гирокомпас. В самом общем случае<br /> прямолинейное равноускоренное движение основания.</p>
 				</div>
 			</div>
 		</div>
 
-		<!-- FORM -->
-
-		<%	var formItems = ['Название комании','Вид деятельности<sup>*</sup>','Местоположение<sup>*</sup>','Web-сайт','ФИО<sup>*</sup>','Должность','E-mail<sup>*</sup>','Контактный телефон<sup>*</sup>',]	%>
-
-		<div class="reg-outer">
-			<div class="container">
-				<form action="" name="regForm">
-					<div class="reg-form">
-						<div class="reg-form__section">
-							<%	formItems.forEach((key, idx)=>{	%>
-								<div class="reg-form__item">
-									<label><%=key %></label>
-									<input name="" type="<% if (idx == 6){ %>email<% }
-																 else if (idx == 7) { %>tel<% }
-																 else { %>text<% } %>"  id="company"/>
-								</div>
-							<%	}) %>
-						</div>
-						<div class="reg-form__section">
-							<div class="reg-form__item">
-								<label>Дополнительная информация</label>
-								<textarea name=""></textarea>
-							</div>
-							<div class="reg-form__item">
-								<div class="file">
-									<label>Приложенные файлы<sup>*</sup></label>
-									<label class="file__item">
-										<input name="" type="file" id="inputFile">
-										<span class="txt"><span id="inputText">Перетащите файлы<br />или кликните сюда для обзора</span></span>
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="show-all show-all_big">
-						<button type="submit" class="btn btn_r">зарегистрироваться</button>
-					</div>
-				</form>
-			</div>
+		<div class="sticky-menu-outer">
+			<button class="toggle"><span></span>Услуги</button>
+			<ul class="sticky-menu">
+				<li class="sticky-menu__item">
+					<a href="">Услуги по созданию</a>
+					<ul>
+						<li><a href="">Создание фирм и организаций</a></li>
+						<li><a href="">Брендинг</a></li>
+						<li><a href="">Digital-услуги<span>(разработка сайтов и приложений)</span></a></li>
+					</ul>
+				</li>
+				<li class="sticky-menu__item"><a href="">Услуги по развитию</a></li>
+				<li class="sticky-menu__item"><a href="">Услуги по оптимизации</a></li>
+				<li class="sticky-menu__item"><a href="">Аудиторско-консалтинговые услуги</a></li>
+				<li class="sticky-menu__item"><a href="">Торговая площадка</a></li>
+			</ul>
 		</div>
 
+		<div class="serv-outer">
 
+			<% var service = ['Создание фирм<br />и организаций', 'Брендинг', 'Digital-услуги<span>(разработка сайтов и приложений)</span>']
+
+			service.forEach((item)=>{ %>
+			<div class="serv">
+				<div class="container">
+					<div class="serv__item">
+							<div class="serv__content">
+								<div class="h1"><%=item %></div>
+								<p>
+									Социальный статус разрушаем. Быличка существенно искажает критерий сходимости Коши. Мифопорождающее текстовое устройство начинает экспериментальный поток сознания, и это ясно видно в следующем отрывке.и Математический анализ иллюстрирует невероятный возврат <br />к стереотипам. Особую ценность, на наш взгляд, представляет бином Ньютона однородно изменяет популярный верлибр. Мифопорождающее текстовое устройство начинает экспериментальный поток сознания, <br />и это ясно видно в следующем отрывке.
+									<br />
+								</p>
+							</div>
+					</div>
+				</div>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+
+	<!-- FORM -->
+	<div class="discount-form">
+		<div class="container">
+			<div class="discount-form__title">
+				получить консультацию
+			</div>
+			<form action="">
+				<div class="discount-form__form">
+					<input type="text" placeholder="Ваше имя" />
+					<input type="tel" placeholder="Телефон" />
+					<input type="email" placeholder="E-mail" />
+					<textarea name="" placeholder="Комментарий к заказу"></textarea>
+				</div>
+				<div class="show-all show-all_big">
+					<button type="submit" class="btn btn_ri">оставить заявку
+						<span>на консультацию</span>
+					</button>
+				</div>
+			</form>
+		</div>
 	</div>
 
 	<!-- FOOTER -->

@@ -6,7 +6,7 @@ const webpack = require('webpack'),
 	nodeEnv = process.env.NODE_ENV || 'development',
 	isProd = nodeEnv === 'production',
 	outputPath = 'js/',
-	pages = ['index', 'excluzive', 'inner', 'contacts'];
+	pages = ['index', 'excluzive', 'inner', 'contacts', 'inner2'];
 
 const extractCSS = new ExtractTextPlugin({
 	filename: '../style.css',
@@ -171,7 +171,7 @@ module.exports = {
 	devServer: {
 		open: true,
 		historyApiFallback: true,
-		port: 4000,
+		port: 3000,
 		hot: true,
 		stats: {
 			colors: true

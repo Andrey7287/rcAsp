@@ -249,14 +249,17 @@ var file_api = ( window.File && window.FileReader && window.FileList && window.B
 		inputFile = document.getElementById('inputFile'),
 		inputText = document.getElementById('inputText');
 
-inputFile.onchange = function(){
+if ( inputFile ) {
+	inputFile.onchange = function(){
 
-		var file_name = inputFile.files[ 0 ].name;
+			var file_name = inputFile.files[ 0 ].name;
 
-		if( !file_name.length ) {
-			return;
-		}
+			if( !file_name.length ) {
+				return;
+			}
 
-		file_api ?	(document.forms.regForm.classList.add('legacy')) : (document.forms.regForm.classList.add('legacy'));
+			file_api ?	(inputText.innerHTML = file_name) : (document.forms.regForm.classList.add('legacy'));
 
+	}
 }
+

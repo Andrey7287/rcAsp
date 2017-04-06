@@ -206,7 +206,7 @@
 .top-img {
 	min-height: 300px;
 	margin-bottom: 20px;
-	@each $i in exc, reg {
+	@each $i in exc, reg, service {
 		&_#{$i} {
 			background: url(../images/img-top-#{$i}.jpg) 100% 50% no-repeat, #153b83;
 		}
@@ -230,4 +230,8 @@
 			@include font(28,32,700,$font: $roboto-c);
 		}
 	}
+}
+
+sup {
+	color: #153b83;
 }

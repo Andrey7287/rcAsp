@@ -36,6 +36,10 @@
 	}
 }
 
+/* REGISTRATION */
+.reg-outer {
+	padding: 20px 0 55px;;
+}
 .reg-form {
 	display: flex;
 	color: #1e1e1e;
@@ -92,17 +96,26 @@
 					bottom: 0;
 					left: 0;
 					text-indent: -9999px;
-					padding-top: 45px;
-					z-index: 5;
+					//z-index: 5;
+					opacity: 0;
 					.legacy & {
 						text-indent: inherit;
-						z-index: 15;
+						//z-index: 15;
+						opacity: 1
+					}
+					&:focus+.txt {
+						box-shadow: 0 0 0 3px #A6C8FF;
 					}
 				}
-				span {
-					z-index: 10;
+				.txt {
+					//z-index: 10;
 					text-align: center;
+					justify-content: center;
 					background: #eef5fb;
+					display: inline-flex;
+					height: 100%;
+					flex-direction: column;
+					flex: 1;
 				}
 			}
 		}

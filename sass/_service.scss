@@ -1,0 +1,37 @@
+.serv {
+	@for $i from 1 to 4 {
+		&:nth-child(#{$i}){
+			background-image: url(../images/bkg-service-#{$i}.jpg);
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			.serv__content {
+				background-color: rgba(255,255,255,.3);
+			}
+		}
+	}
+	&:nth-child(even){
+		background-position: 100% 50%;
+		background-color: #eef5fb;
+		.serv__item {
+			justify-content: flex-start;
+			text-align: left;
+		}
+		.serv__content {
+			background-color: transparent;
+		}
+	}
+	&__item {
+		display: flex;
+		justify-content: flex-end;
+		text-align: right;
+		padding-top: 25px;
+	}
+	&__content {
+		width: 653px;
+		p {
+			@include font(18);
+			color: #1e1e1e;
+			margin: 30px 0 40px;
+		}
+	}
+}
