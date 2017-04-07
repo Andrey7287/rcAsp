@@ -280,4 +280,5 @@ function expandMenu(e) {
 $('#toggleStickyMenu').click(function(e){
 	e.preventDefault();
 	$(this).parent().toggleClass('open');
+	$(this).next().find('.act').removeClass('act').find('.dropdown').slideUp();
 });

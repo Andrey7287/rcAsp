@@ -5,62 +5,439 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
-<link href="./js/../style.css" rel="stylesheet"></head>
+<link href="js/../style.css" rel="stylesheet"></head>
 
 <body>
-	<div class="body">
-		<div class="content">
-			<header>
-				<div class="header">
-					<div class="container">
 
-						<nav id="siteMenu">
+	<header class="header">
+		<div class="top-panel">
+			<div class="top-panel__inner container">
+				<div class="top-panel__item">Комплексные услуги по созданию и развитию организаций, оптимизации бизнес-процессов</div>
+				<div class="top-panel__item">
+					<div class="control-panel">
+						<div class="control-panel__item">
+							<a href="" id="topSearch" class="control-panel__link control-panel__link_search">Поиск</a>
+							<div class="search">
+								<form action="/search/" method="get">
+									<input class="search__input" type="text" name="q" placeholder="Поиск по сайту">
+									<input class="search__submit" type="submit" value="найти">
+								</form>
+							</div>
+						</div>
+						<div class="control-panel__item">
+							<a href="#" class="control-panel__link control-panel__link_login">Вход</a>
+						</div>
+						<div class="control-panel__item">
+							<a href="#" class="control-panel__link control-panel__link_reg">Регистрация</a>
+						</div>
+						<div class="control-panel__item">
 							<button class="c-hamburger c-hamburger--htx">
 								<span>toggle menu</span>
 							</button>
-							<ul class="site-nav mobile-close hide">
-								<li class="site-nav__item site-nav__item--act"><a href="/" class="site-nav__link"><span>Главная</span></a></li>
-								<li class="site-nav__item"><a href="#" class="site-nav__link"><span>О&nbsp;нас</span></a></li>
-								<li class="site-nav__item"><a href="#" class="site-nav__link"><span>Каталог</span></a></li>
-								<li class="site-nav__item"><a href="#" class="site-nav__link"><span>Статьи</span></a></li>
-								<li class="site-nav__item"><a href="#" class="site-nav__link"><span>Отзывы</span></a></li>
-								<li class="site-nav__item"><a href="#" class="site-nav__link"><span>Контакты</span></a></li>
-							</ul>
-						</nav>
-
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 
-			</header>
-			<!-- HEADER end-->
-			<!--  breadcrumbs -->
-			<div class="container">
-				<div class="breadcrumbs">
-					<a class="breadcrumbs__item" href="#">Главная</a>
-					<a class="breadcrumbs__item" href="#">Каталог</a>
-					<span class="breadcrumbs__item">Товар каталога</span>
+		<div class="container">
+			<div class="header-inner">
+				<div class="header-inner__item">
+					<a href="/" class="header-inner__logo">
+						<svg class="site-logo" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310.38 232.71"><defs></defs><title>logo-aaspekt</title><polygon class="cls-1" points="207.07 80.24 203.02 77.54 175.06 0 163.89 0 182 53.77 173.08 53.77 153.69 0 117.48 0 117.48 10.27 128.97 10.27 131.4 12.97 107.49 77.54 103.3 80.24 96.55 80.24 96.55 90.51 135.99 90.51 135.99 80.24 122.89 80.24 120.05 77.54 124.64 64.03 124.69 64.03 132.31 42.21 143.42 10.27 145.85 10.27 160.58 53.77 151.53 53.77 136.56 53.77 133.17 63.8 182.19 63.8 182.19 63.82 185.39 63.82 185.46 64.03 190.05 77.54 187.62 80.24 185.71 80.24 181.65 77.54 179.4 71.29 166.56 71.29 168.69 77.54 166.25 80.24 153.28 80.24 153.28 90.51 174.65 90.51 192.46 90.51 213.83 90.51 213.83 80.24 207.07 80.24"/><path class="cls-2" d="M168.74,255.33l13.75,38.12,2,1.33h3.32v5H168.54v-5h6.38l1.19-1.33-2.26-6.64H154.46l-2.26,6.64,1.39,1.33H160v5H140.65v-5H144l2.06-1.33,11.75-31.74-1.19-1.33h-5.64v-5Zm-12.48,26.43h15.87l-7.24-21.38h-1.2Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M201.94,296a4.27,4.27,0,0,1-4.38,4.25A4.2,4.2,0,0,1,193.3,296a4.27,4.27,0,0,1,4.25-4.38A4.34,4.34,0,0,1,201.94,296Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M235.47,255.33l13.75,38.12,2,1.33h3.32v5H235.27v-5h6.38l1.2-1.33-2.26-6.64H221.19l-2.26,6.64,1.39,1.33h6.44v5H207.38v-5h3.32l2.06-1.33,11.75-31.74-1.2-1.33h-5.64v-5ZM223,281.76h15.87l-7.24-21.38h-1.2Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M287.73,295.44c-3.72,3.72-7.84,5.18-13.22,5.18-10.29,0-16.67-7.24-16.67-17.66s7.17-17.8,16.47-17.8c8.17,0,13.28,5.25,13.28,11.09,0,3.12-1.93,5.18-4.78,5.18a4.54,4.54,0,0,1-2.26-8.5c-1-1.66-3.19-2.72-5.91-2.72-6.11,0-11,4.45-11,12.62s4.58,12.75,11.29,12.75c3.72,0,6.51-1.13,9.63-4.12Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M332.29,266v4.65h-4.38l-1.33,1.33v21.92l1.33,1.33h4.38v4.65H315.22v-4.65h4.38l1.33-1.33V271.33l-.66-.66H306.33l-.66.66v22.51l1.33,1.33h4.45v4.65H294.31v-4.65h4.38l1.33-1.33V271.93l-1.33-1.33h-4.38V266Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M369.94,284.42h-26.7c.47,7.37,5,11.16,11.36,11.16,4.45,0,7.9-1.46,10.49-4.45l3.45,3.65c-3.72,4.25-8.23,5.84-14.08,5.84-10.69,0-16.93-7.3-16.93-17.66s6.51-17.8,16.14-17.8c9.1,0,13.88,6.31,13.88,14.48h2.39Zm-7.77-4.78c0-5.84-2.85-9.43-8.63-9.43s-9.36,3.59-10.09,9.43Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M391.06,266v4.65h-3.52l-1.33,1.33v7.5h7L399,272l-.4-1.39H395V266h16.34v4.65h-2.86l-2.92,1.53-7.77,10.09c2.86,9.89,4.85,12.95,7.44,12.95,1.66,0,2.52-1.06,2.52-3.19v-3.12h5.38V292c0,5.51-2.59,8.43-7.64,8.43-6,0-9.63-3.85-12.62-16h-6l-.66.66v8.77l1.33,1.33h4.78v4.65H375.05v-4.65h4.25l1.33-1.33V271.93l-1.33-1.33h-4.25V266Z" transform="translate(-140.21 -112.99)"/><path class="cls-2" d="M450.16,266v15.87h-4.72l-.4-9.56-1.73-1.66h-5.84l-.66.66v22.58l1.33,1.33h6v4.65H424v-4.65h6l1.33-1.33V271.27l-.66-.66h-5.78l-1.73,1.66-.46,9.56h-4.78V266Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M147,323.66h-4.23l-1,2.9h-1.55l4.05-11.25h1.3l4,11.25H148Zm-3.79-1.27h3.36l-1.64-4.83h0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M161.2,316.51h-5.38v10h-1.52V315.31h6.9Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M172.34,321.34h-4.62v4h5.41v1.19H166.2V315.31H173v1.2h-5.32v3.64h4.62Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M186.59,326.56h-1.52v-5h-5.46v5h-1.52V315.31h1.52v5.08h5.46v-5.08h1.52Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M200,316.51h-3.71v10h-1.52v-10h-3.66v-1.2H200Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M212.59,323l0,0a3.38,3.38,0,0,1-1.11,2.65,4.25,4.25,0,0,1-3,1.07,4,4,0,0,1-3.11-1.35,5,5,0,0,1-1.2-3.43v-2a5,5,0,0,1,1.2-3.43,4,4,0,0,1,3.11-1.36,4.37,4.37,0,0,1,3,1,3.36,3.36,0,0,1,1.1,2.69l0,0h-1.46a2.51,2.51,0,0,0-.7-1.87,2.67,2.67,0,0,0-2-.69,2.39,2.39,0,0,0-2,1,4.18,4.18,0,0,0-.76,2.55v2a4.21,4.21,0,0,0,.76,2.56,2.4,2.4,0,0,0,2,1,2.68,2.68,0,0,0,2-.68,2.53,2.53,0,0,0,.7-1.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M225.38,316.51h-3.71v10h-1.52v-10h-3.66v-1.2h8.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M230.15,326.56V315.31h3.67a4.45,4.45,0,0,1,2.76.76,2.69,2.69,0,0,1,1,2.28,2.06,2.06,0,0,1-.45,1.3,2.82,2.82,0,0,1-1.19.88,2.61,2.61,0,0,1,1.75,1,2.93,2.93,0,0,1,.64,1.89,2.86,2.86,0,0,1-1,2.36,4.19,4.19,0,0,1-2.72.81Zm1.52-6.46h2.46a2,2,0,0,0,1.38-.47,1.88,1.88,0,0,0,0-2.66,2.64,2.64,0,0,0-1.66-.45h-2.15Zm0,1.19v4.09h2.93a2.35,2.35,0,0,0,1.62-.51,1.85,1.85,0,0,0,.58-1.46,2,2,0,0,0-.59-1.51,2.31,2.31,0,0,0-1.58-.61h-3Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M252,321.94a4.8,4.8,0,0,1-1.28,3.42,4.35,4.35,0,0,1-3.32,1.36,4.12,4.12,0,0,1-3.2-1.36,4.9,4.9,0,0,1-1.23-3.42v-2a4.92,4.92,0,0,1,1.23-3.42,4.11,4.11,0,0,1,3.2-1.37,4.34,4.34,0,0,1,3.32,1.36,4.81,4.81,0,0,1,1.28,3.43Zm-1.52-2a3.79,3.79,0,0,0-.83-2.53,2.78,2.78,0,0,0-2.24-1,2.58,2.58,0,0,0-2.12,1,3.93,3.93,0,0,0-.79,2.53v2a4,4,0,0,0,.79,2.55,2.58,2.58,0,0,0,2.12,1,2.78,2.78,0,0,0,2.24-1,3.83,3.83,0,0,0,.83-2.55Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M272.43,323l0,0a3.38,3.38,0,0,1-1.11,2.65,4.25,4.25,0,0,1-3,1.07,4,4,0,0,1-3.11-1.35,5,5,0,0,1-1.2-3.43v-2a5,5,0,0,1,1.2-3.43,4,4,0,0,1,3.11-1.36,4.37,4.37,0,0,1,3,1,3.36,3.36,0,0,1,1.1,2.69l0,0H271a2.51,2.51,0,0,0-.7-1.87,2.67,2.67,0,0,0-2-.69,2.39,2.39,0,0,0-2,1,4.18,4.18,0,0,0-.76,2.55v2a4.21,4.21,0,0,0,.76,2.56,2.4,2.4,0,0,0,2,1,2.68,2.68,0,0,0,2-.68A2.53,2.53,0,0,0,271,323Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M285.23,316.51h-3.71v10H280v-10h-3.66v-1.2h8.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M291.51,322v4.51H290V315.31h4.3a4,4,0,0,1,2.8.93,3.49,3.49,0,0,1,0,4.89,4,4,0,0,1-2.8.92Zm0-1.19h2.78a2,2,0,0,0,2.27-2.16,2.23,2.23,0,0,0-.57-1.56,2.18,2.18,0,0,0-1.7-.63h-2.78Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M307.95,323.66h-4.23l-1,2.9h-1.55l4.06-11.25h1.3l4,11.25h-1.55Zm-3.79-1.27h3.36l-1.64-4.83h0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M322.17,316.51h-3.71v10h-1.52v-10h-3.66v-1.2h8.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M333.07,321.34h-4.62v4h5.41v1.19h-6.93V315.31h6.84v1.2h-5.32v3.64h4.62Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M345.67,316.51h-5.38v10h-1.52V315.31h6.9Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M357.67,315.31h1.52v11.25h-1.52V318l0,0-5.41,8.59h-1.52V315.31h1.52v8.56l0,0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M372.9,315.31v11.25h-1.52V321.9a9.57,9.57,0,0,1-1.42.32,11.43,11.43,0,0,1-1.63.1,4.25,4.25,0,0,1-2.82-.82,3.29,3.29,0,0,1-1-2.65v-3.55h1.53v3.55a2.34,2.34,0,0,0,.53,1.76,2.48,2.48,0,0,0,1.71.49,10.75,10.75,0,0,0,1.55-.11,12.7,12.7,0,0,0,1.51-.32v-5.38Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M384.82,321.34H380.2v4h5.41v1.19h-6.93V315.31h6.84v1.2H380.2v3.64h4.62Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M398.6,323l0,0a3.38,3.38,0,0,1-1.11,2.65,4.25,4.25,0,0,1-3,1.07,4,4,0,0,1-3.11-1.35,5,5,0,0,1-1.2-3.43v-2a5,5,0,0,1,1.2-3.43,4,4,0,0,1,3.11-1.36,4.36,4.36,0,0,1,3,1,3.36,3.36,0,0,1,1.1,2.69l0,0h-1.46a2.51,2.51,0,0,0-.7-1.87,2.67,2.67,0,0,0-2-.69,2.4,2.4,0,0,0-2,1,4.18,4.18,0,0,0-.76,2.55v2a4.21,4.21,0,0,0,.76,2.56,2.4,2.4,0,0,0,2,1,2.68,2.68,0,0,0,2-.68,2.52,2.52,0,0,0,.7-1.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M406.27,321.48h-1v5.08h-1.52V315.31h1.52v5h.83l4.17-5H412l0,0-4.56,5.32,4.88,5.85v0h-1.85Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M425.32,321.94a4.8,4.8,0,0,1-1.28,3.42,4.35,4.35,0,0,1-3.32,1.36,4.12,4.12,0,0,1-3.2-1.36,4.9,4.9,0,0,1-1.23-3.42v-2a4.92,4.92,0,0,1,1.23-3.42,4.11,4.11,0,0,1,3.2-1.37,4.34,4.34,0,0,1,3.32,1.36,4.81,4.81,0,0,1,1.28,3.43Zm-1.52-2a3.79,3.79,0,0,0-.83-2.53,2.78,2.78,0,0,0-2.24-1,2.58,2.58,0,0,0-2.12,1,3.93,3.93,0,0,0-.79,2.53v2a4,4,0,0,0,.79,2.55,2.58,2.58,0,0,0,2.12,1,2.78,2.78,0,0,0,2.24-1,3.83,3.83,0,0,0,.83-2.55Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M437.52,316.51h-5.38v10h-1.52V315.31h6.9Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M450.59,321.94a4.8,4.8,0,0,1-1.28,3.42,4.35,4.35,0,0,1-3.32,1.36,4.12,4.12,0,0,1-3.2-1.36,4.9,4.9,0,0,1-1.23-3.42v-2a4.92,4.92,0,0,1,1.23-3.42,4.11,4.11,0,0,1,3.2-1.37,4.34,4.34,0,0,1,3.32,1.36,4.81,4.81,0,0,1,1.28,3.43Zm-1.52-2a3.79,3.79,0,0,0-.83-2.53,2.78,2.78,0,0,0-2.24-1,2.58,2.58,0,0,0-2.12,1,3.93,3.93,0,0,0-.79,2.53v2a4,4,0,0,0,.79,2.55,2.58,2.58,0,0,0,2.12,1,2.78,2.78,0,0,0,2.24-1,3.83,3.83,0,0,0,.83-2.55Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M196.69,341v4.51h-1.52V334.29h4.3a4,4,0,0,1,2.8.93,3.49,3.49,0,0,1,0,4.89,4,4,0,0,1-2.8.92Zm0-1.19h2.78a2,2,0,0,0,2.27-2.16,2.23,2.23,0,0,0-.57-1.56,2.18,2.18,0,0,0-1.7-.63h-2.78Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M213.13,342.64H208.9l-1,2.9h-1.55l4.05-11.25h1.3l4,11.25h-1.55Zm-3.79-1.27h3.36l-1.64-4.83h0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M228.64,337.34a2.2,2.2,0,0,1-.53,1.43,3.44,3.44,0,0,1-1.45,1,3.25,3.25,0,0,1,1.6,1,2.49,2.49,0,0,1,.55,1.64,2.81,2.81,0,0,1-1.23,2.43,5.46,5.46,0,0,1-3.22.87,5.31,5.31,0,0,1-3-.83,2.62,2.62,0,0,1-1.21-2.41l0,0h1.45a1.83,1.83,0,0,0,.76,1.49,3.09,3.09,0,0,0,2,.61,3.57,3.57,0,0,0,2.15-.58,1.78,1.78,0,0,0,.78-1.5,1.74,1.74,0,0,0-.71-1.53,3.66,3.66,0,0,0-2.1-.5h-1.41v-1.2h1.41a3.21,3.21,0,0,0,2-.51,1.67,1.67,0,0,0,.65-1.39,1.74,1.74,0,0,0-.7-1.42,3.27,3.27,0,0,0-2.07-.56,3,3,0,0,0-1.83.55,1.64,1.64,0,0,0-.75,1.36h-1.45v0a2.49,2.49,0,0,1,1.13-2.21,4.84,4.84,0,0,1,2.91-.85,5.25,5.25,0,0,1,3.14.83A2.76,2.76,0,0,1,228.64,337.34Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M234.35,345.54V334.29H238a4.45,4.45,0,0,1,2.76.76,2.69,2.69,0,0,1,1,2.28,2.06,2.06,0,0,1-.45,1.3,2.82,2.82,0,0,1-1.19.88,2.61,2.61,0,0,1,1.75,1,2.93,2.93,0,0,1,.64,1.89,2.86,2.86,0,0,1-1,2.36,4.19,4.19,0,0,1-2.72.81Zm1.52-6.46h2.46a2,2,0,0,0,1.38-.47,1.88,1.88,0,0,0,0-2.66,2.64,2.64,0,0,0-1.66-.45h-2.15Zm0,1.19v4.09h2.93a2.35,2.35,0,0,0,1.62-.51,1.85,1.85,0,0,0,.58-1.46,2,2,0,0,0-.59-1.51,2.31,2.31,0,0,0-1.58-.61h-3Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M254.57,334.29h1.52v11.25h-1.52V337l0,0-5.41,8.59h-1.52V334.29h1.52v8.56l0,0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M269.49,335.49h-3.71v10h-1.52v-10H260.6v-1.2h8.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M281.26,334.29h1.52v11.25h-1.52V337l0,0-5.41,8.59h-1.52V334.29h1.52v8.56l0,0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M289.18,345.54h-1.61l2.64-5.11a3.55,3.55,0,0,1-1.66-1.13,2.83,2.83,0,0,1-.57-1.78,2.88,2.88,0,0,1,1.06-2.38,4.56,4.56,0,0,1,2.92-.85h3.6v11.25H294v-4.7h-2.49Zm4.85-10H292a2.74,2.74,0,0,0-1.83.54,1.85,1.85,0,0,0-.63,1.48,2,2,0,0,0,.63,1.54,2.56,2.56,0,0,0,1.81.59H294Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M315,335.49h-5.38v3.25h2.77a4,4,0,0,1,2.8.92,3.17,3.17,0,0,1,1,2.44,3.26,3.26,0,0,1-1,2.48,3.91,3.91,0,0,1-2.8.95H308.1V334.29H315Zm-5.38,4.45v4.41h2.77a2.15,2.15,0,0,0,1.71-.65,2.35,2.35,0,0,0,.57-1.6,2.19,2.19,0,0,0-.57-1.54,2.21,2.21,0,0,0-1.71-.62Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M328.3,334.29h1.52v11.25H328.3V337l0,0-5.41,8.59h-1.52V334.29h1.52v8.56l0,0Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M343.73,337.34a2.21,2.21,0,0,1-.52,1.43,3.44,3.44,0,0,1-1.45,1,3.25,3.25,0,0,1,1.59,1,2.49,2.49,0,0,1,.55,1.64,2.81,2.81,0,0,1-1.23,2.43,5.46,5.46,0,0,1-3.22.87,5.31,5.31,0,0,1-3-.83,2.62,2.62,0,0,1-1.21-2.41v0h1.45a1.83,1.83,0,0,0,.77,1.49,3.09,3.09,0,0,0,2,.61,3.57,3.57,0,0,0,2.15-.58,1.78,1.78,0,0,0,.78-1.5,1.74,1.74,0,0,0-.71-1.53,3.66,3.66,0,0,0-2.1-.5h-1.41v-1.2h1.41a3.21,3.21,0,0,0,2-.51,1.67,1.67,0,0,0,.65-1.39,1.74,1.74,0,0,0-.7-1.42,3.27,3.27,0,0,0-2.07-.56,3,3,0,0,0-1.83.55,1.64,1.64,0,0,0-.75,1.36h-1.45v0a2.49,2.49,0,0,1,1.13-2.21,4.84,4.84,0,0,1,2.91-.85,5.24,5.24,0,0,1,3.14.83A2.76,2.76,0,0,1,343.73,337.34Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M357.94,345.54h-1.52v-5H351v5h-1.52V334.29H351v5.08h5.46v-5.08h1.52Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M369.87,340.32h-4.62v4h5.41v1.19h-6.93V334.29h6.84v1.2h-5.32v3.64h4.62Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M383.65,341.94l0,0a3.38,3.38,0,0,1-1.11,2.65,4.25,4.25,0,0,1-3,1.07,4,4,0,0,1-3.11-1.35,5,5,0,0,1-1.2-3.43v-2a5,5,0,0,1,1.2-3.43,4,4,0,0,1,3.11-1.36,4.36,4.36,0,0,1,3,1,3.36,3.36,0,0,1,1.1,2.69l0,0h-1.46a2.51,2.51,0,0,0-.7-1.87,2.67,2.67,0,0,0-2-.69,2.4,2.4,0,0,0-2,1,4.18,4.18,0,0,0-.76,2.55v2a4.21,4.21,0,0,0,.76,2.56,2.4,2.4,0,0,0,2,1,2.68,2.68,0,0,0,2-.68,2.52,2.52,0,0,0,.7-1.89Z" transform="translate(-140.21 -112.99)"/><path class="cls-1" d="M394.61,342.64h-4.23l-1,2.9h-1.55l4.06-11.25h1.3l4,11.25H395.6Zm-3.79-1.27h3.36l-1.64-4.83h0Z" transform="translate(-140.21 -112.99)"/></svg>
+					</a>
+				</div>
+				<div class="header-inner__item header-inner__item_nav">
+					<nav class="site-nav-outer">
+						<!-- Site menu data -->
+
+							<!-- Site menu template -->
+							<ul class="site-nav">
+
+									<li class="site-nav__item site-nav__item--act">
+										<a href="./#about">
+											О&nbsp;компании
+										</a>
+									</li>
+
+									<li class="site-nav__item">
+										<a href="./excluzive.html">
+											Услуги
+										</a>
+									</li>
+
+									<li class="site-nav__item">
+										<a href="./inner.html">
+											Сотрудничество
+										</a>
+									</li>
+
+									<li class="site-nav__item">
+										<a href="./inner2.html">
+											Карьера
+										</a>
+									</li>
+
+									<li class="site-nav__item">
+										<a href="./inner3.html">
+											Пресс-центр
+										</a>
+									</li>
+
+									<li class="site-nav__item">
+										<a href="./contacts.html">
+											Контакты
+										</a>
+									</li>
+
+							</ul>
+					</nav>
+				</div>
+				<div class="header-inner__item">
+					<a href="#" class="header-inner__img">
+						<img src="../images/excluzive.png" alt="" />
+					</a>
+				</div>
+				<div class="header-inner__item">
+					<div class="header-inner__phone">+7 (987) 654-32-10</div>
+					<div class="header-inner__phone">+7 (000) 000-00-00</div>
+					<button class="btn btn_r">связаться с нами</button>
 				</div>
 			</div>
-
-
-
 		</div>
-		<footer class="footer">
+
+	</header>
+	<!-- HEADER end-->
+
+	<div class="content">
+
+		<!-- Top img block -->
+		<div class="top-img top-img_reg">
+			<div class="container">
+				<div class="top-img__inner">
+					<div class="top-img__title">Регистрация</div>
+					<p>Заполните поля ниже и отправьте заявку на регистрацию. <br />После проверки информации Вам будет направлено уведомление на электронную почту с резолюцией о прохождении регистрации. В случае положительного решения письмо будет содержать логин и пароль для входа.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- FORM -->
+
+
+
+		<div class="reg-outer">
+			<div class="container">
+				<form action="" name="regForm">
+					<div class="reg-form">
+						<div class="reg-form__section">
+
+								<div class="reg-form__item">
+									<label>Название комании</label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>Вид деятельности<sup>*</sup></label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>Местоположение<sup>*</sup></label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>Web-сайт</label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>ФИО<sup>*</sup></label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>Должность</label>
+									<input name="" type="text"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>E-mail<sup>*</sup></label>
+									<input name="" type="email"  id="company"/>
+								</div>
+
+								<div class="reg-form__item">
+									<label>Контактный телефон<sup>*</sup></label>
+									<input name="" type="tel"  id="company"/>
+								</div>
+
+						</div>
+						<div class="reg-form__section">
+							<div class="reg-form__item">
+								<label>Дополнительная информация</label>
+								<textarea name=""></textarea>
+							</div>
+							<div class="reg-form__item">
+								<div class="file">
+									<label>Приложенные файлы<sup>*</sup></label>
+									<label class="file__item">
+										<input name="" type="file" id="inputFile">
+										<span class="txt"><span id="inputText">Перетащите файлы<br />или кликните сюда для обзора</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="show-all show-all_big">
+						<button type="submit" class="btn btn_r">зарегистрироваться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="footer__top">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6">
-						<div class="copyright">© Lorem ipsum dolor sit amet. 2017</div>
+
+
+
+
+							<div class="col-md-2 col-sm-6">
+								<div class="footer-nav">
+									<div class="footer-nav__title">
+										О&nbsp;компании
+									</div>
+									<ul class="footer-nav__menu">
+
+											<li>
+												<a href="c">
+													Направленный маркетинг
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Небезынтересно
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Реформаторский
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Пафос
+												</a>
+											</li>
+
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2 col-sm-6">
+								<div class="footer-nav">
+									<div class="footer-nav__title">
+										Услуги
+									</div>
+									<ul class="footer-nav__menu">
+
+											<li>
+												<a href="c">
+													Направленный маркетинг
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Небезынтересно изменяет
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Реформаторский
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Пафос
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Придерживаясь принципово
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Дарвинизма
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Монтескье
+												</a>
+											</li>
+
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2 col-sm-6">
+								<div class="footer-nav">
+									<div class="footer-nav__title">
+										Пункт меню
+									</div>
+									<ul class="footer-nav__menu">
+
+											<li>
+												<a href="c">
+													Направленный
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Небезынтересно
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Реформаторский
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Пафос
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Маркетинг
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Амбивалентность
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Угроза мира
+												</a>
+											</li>
+
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2 col-sm-6">
+								<div class="footer-nav">
+									<div class="footer-nav__title">
+										Еще раздел
+									</div>
+									<ul class="footer-nav__menu">
+
+											<li>
+												<a href="c">
+													Направленный маркетинг
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Небезынтересно
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Реформаторский
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Пафос
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Придерживаясь
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Дарвинизма
+												</a>
+											</li>
+
+											<li>
+												<a href="c">
+													Дарвинизма
+												</a>
+											</li>
+
+									</ul>
+								</div>
+							</div>
+
+
+								<div class="col-md-4 col-sm-12">
+									<div class="footer-nav">
+										<div class="footer-nav__title">
+											Контакты
+										</div>
+										<div class="footer-nav__contacts">
+											<div class="footer-nav__addr">
+												Москва, ул. Московский Проспект, д.112, стр.1 <a href="">Схема проезда</a>
+											</div>
+											<div class="footer-nav__phone">+7 (987) 654- 32-10</div>
+											<div class="footer-nav__phone">+7 (000) 000-00-00</div>
+											<a href="mailto:info@aaspekt.ru">info@aaspekt.ru</a>
+										</div>
+										<button class="btn btn_ri">связаться с нами</button>
+									</div>
+								</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-8">
+						<div class="copyright">© А.Аспект. Агентство стратегического развития бизнеса. 2017</div>
 					</div>
-					<div class="col-xs-6">
-						<a href="http://infodesign.ru/" class="infodisign">© Создание сайта и дизайн «Инфодизайн» 2017</a>
+					<div class="col-md-6  col-sm-4">
+						<a href="http://infodesign.ru/" class="infodisign">© Создание сайта <span class="cut">и дизайн</span> «ИнфоДизайн» 2017</a>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<button href="#" class="scrollup">Наверх</button>
-	</div>
-<script type="text/javascript" src="./js/bundle.js"></script><script type="text/javascript" src="./js/vendor.bundle.js"></script></body>
+		</div>
+	</footer>
+	<button href="#" class="scrollup">Наверх</button>
+<script type="text/javascript" src="js/bundle.js"></script></body>
 
 </html>

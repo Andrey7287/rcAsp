@@ -206,18 +206,34 @@
 .top-img {
 	min-height: 300px;
 	margin-bottom: 20px;
+	@include breakpoint(middle){
+		min-height: auto;
+	}
 	@each $i in exc, reg, service {
 		&_#{$i} {
 			background: url(../images/img-top-#{$i}.jpg) 100% 50% no-repeat, #153b83;
 		}
 	}
+	@include breakpoint(middle){
+		background: #153b83;
+	}
 	&__inner {
 		padding: 25px 0;
 		width: 65%;
 		color: #fff;
+		@include breakpoint(middle) {
+			width: auto;
+			padding: 10px 0;
+			font-size: 0.9em;
+		}
 		p {
 			margin: 30px 0;
 			@include font(18,30,300);
+			@include breakpoint(middle) {
+				br {
+					display: none;
+				}
+			}
 		}
 	}
 	&__title {

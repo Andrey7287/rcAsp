@@ -83,9 +83,18 @@ body h1, .h1 {
 	@include breakpoint(mobile){
 		@include font(28,32,700,$font: $roboto-c);
 	}
+	@include breakpoint(small){
+		@include font(24,28,700,$font: $roboto-c);
+	}
 	span {
 		@include font(24, 30, 400, 36, $roboto-c);
 		display: block;
+		@include breakpoint(mobile) {
+			@include font(20, 24, 400, 28, $roboto-c);
+		}
+		@include breakpoint(small) {
+			@include font(16, 20, 400, 24, $roboto-c);
+		}
 	}
 }
 body h2, .h2 {

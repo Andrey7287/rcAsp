@@ -61,13 +61,14 @@
 .sticky-menu-outer {
 	padding: 15px;
 	background: #01266e;
-	width: 75px;
+	width: 70px;
 	position: fixed;
 	top: 250px;
 	left: 0;
 	transition: all.4s ease-in;
+	z-index: 1000;
 	.toggle {
-		@include font(0,0);
+		@include font(0);
 		border: 0;
 		background: transparent;
 		color: #6b8fd3;
@@ -117,6 +118,13 @@
 	width: 0px;
 	font-size: 0em;
 	transition: all .4s ease-out;
+	a {
+		display: inline;
+		border-bottom: 1px dashed #6b8fd3;
+		&:hover {
+			border-bottom: 1px dashed transparent;
+		}
+	}
 	.open & {
 		font-size: 1em;
 		width: 265px;
@@ -127,20 +135,37 @@
 		transition: padding .4s ease-out;
 		.open & {
 			padding: 15px 0;
-		}
-		ul {
-			display: none;
+			&:first-child {
+				padding-top: 7px;
+			}
 		}
 	}
 	&__link {
 		color: #fff;
-		display: inline;
-		border-bottom: 1px dashed #6b8fd3;
 		transition: all 0.3s ease-in;
-		&:hover,
 		.act & {
 			border-bottom: 1px dashed transparent;
-
+		}
+	}
+	.dropdown {
+		display: none;
+		padding: 0;
+		li {
+			position: relative;
+			padding: 8px 0 0 13px;
+			&::before {
+				content: " ";
+				position: absolute;
+				display: block;
+				width: 9px;
+				border-bottom: 1px solid #6b8fd3;
+				top: 21px;
+				left: 0;
+			}
+			a {
+				@include font(18,24,300,24,$roboto-c);
+				color: #fff;
+			}
 		}
 	}
 }
