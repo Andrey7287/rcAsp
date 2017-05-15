@@ -1,3 +1,14 @@
+.cabinet-outer {
+	.contacts {
+		margin-bottom: 20px;
+		&__item {
+			display: flex;
+			span:first-child {
+				width: 100px;
+			}
+		}
+	}
+}
 .map {
 	height: 470px;
 	@include breakpoint (mobile){
@@ -8,4 +19,3 @@
 .map-wrapper {
 	position: relative;
 }
-

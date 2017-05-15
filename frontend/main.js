@@ -31,19 +31,6 @@ $('.c-hamburger').on('click', function(){
 	$('.site-nav').slideToggle();
 });
 
-
-/**********************
-********* MAP *********
-***********************/
-
-if ( isMap ) {
-
-	require.ensure([], (require) => {
-		require('./modules/ymap');
-	}, 'map');
-
-}
-
 /***********************
 ******** SLIDERS ********
 ************************/
